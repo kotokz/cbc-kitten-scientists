@@ -24,7 +24,7 @@ var game = null;
 var i18ng = null;
 var lang = 'en';
 
-var run = function() {
+var run = function () {
 
     var i18nData = {
         'en': {
@@ -115,7 +115,7 @@ var run = function() {
             'ui.upgrade.policies': 'Policies',
             'ui.upgrade.policies.load': 'Load',
             'ui.upgrade.policies.show': 'Show',
-            
+
             'ui.faith.addtion': 'addition',
             'option.faith.best.unicorn': 'Build Best Unicorn Building First',
             'option.faith.best.unicorn.desc': 'Include auto Sacrifice Unicorns if tears are not enough to build the best unicorn building',
@@ -459,7 +459,7 @@ var run = function() {
         i18nData[lang] = i18nData['en'];
     }
 
-    var i18n = function(key, args) {
+    var i18n = function (key, args) {
         // i18n('$xx') mean load string from game
         // i18n('xx') mean load string from ks
         if (key[0] == "$")
@@ -508,13 +508,13 @@ var run = function() {
             // split form faith to make "Best Unicorn Building" easily
             unicorn: {
                 items: {
-                    unicornPasture:     {require: false,         enabled: true,  variant: 'zp', label: i18n('$buildings.unicornPasture.label'), checkForReset: true, triggerForReset: -1},
-                    unicornTomb:        {require: false,         enabled: false, variant: 'z',  label: i18n('$religion.zu.unicornTomb.label'), checkForReset: true, triggerForReset: -1},
-                    ivoryTower:         {require: false,         enabled: false, variant: 'z',  label: i18n('$religion.zu.ivoryTower.label'), checkForReset: true, triggerForReset: -1},
-                    ivoryCitadel:       {require: false,         enabled: false, variant: 'z',  label: i18n('$religion.zu.ivoryCitadel.label'), checkForReset: true, triggerForReset: -1},
-                    skyPalace:          {require: false,         enabled: false, variant: 'z',  label: i18n('$religion.zu.skyPalace.label'), checkForReset: true, triggerForReset: -1},
-                    unicornUtopia:      {require: 'gold',        enabled: false, variant: 'z',  label: i18n('$religion.zu.unicornUtopia.label'), checkForReset: true, triggerForReset: -1},
-                    sunspire:           {require: 'gold',        enabled: false, variant: 'z',  label: i18n('$religion.zu.sunspire.label'), checkForReset: true, triggerForReset: -1},
+                    unicornPasture: { require: false, enabled: true, variant: 'zp', label: i18n('$buildings.unicornPasture.label'), checkForReset: true, triggerForReset: -1 },
+                    unicornTomb: { require: false, enabled: false, variant: 'z', label: i18n('$religion.zu.unicornTomb.label'), checkForReset: true, triggerForReset: -1 },
+                    ivoryTower: { require: false, enabled: false, variant: 'z', label: i18n('$religion.zu.ivoryTower.label'), checkForReset: true, triggerForReset: -1 },
+                    ivoryCitadel: { require: false, enabled: false, variant: 'z', label: i18n('$religion.zu.ivoryCitadel.label'), checkForReset: true, triggerForReset: -1 },
+                    skyPalace: { require: false, enabled: false, variant: 'z', label: i18n('$religion.zu.skyPalace.label'), checkForReset: true, triggerForReset: -1 },
+                    unicornUtopia: { require: 'gold', enabled: false, variant: 'z', label: i18n('$religion.zu.unicornUtopia.label'), checkForReset: true, triggerForReset: -1 },
+                    sunspire: { require: 'gold', enabled: false, variant: 'z', label: i18n('$religion.zu.sunspire.label'), checkForReset: true, triggerForReset: -1 },
                 }
             },
             faith: {
@@ -524,11 +524,11 @@ var run = function() {
                 trigger: 0,
                 // Additional options
                 addition: {
-                    bestUnicornBuilding:    {enabled: true,  misc: true, label: i18n('option.faith.best.unicorn')},
-                    autoPraise:             {enabled: true,  misc: true, label: i18n('option.praise'), subTrigger: 0.98},
+                    bestUnicornBuilding: { enabled: true, misc: true, label: i18n('option.faith.best.unicorn') },
+                    autoPraise: { enabled: true, misc: true, label: i18n('option.praise'), subTrigger: 0.98 },
                     // Former [Faith Reset]
-                    adore:                  {enabled: false, misc: true, label: i18n('option.faith.adore'), subTrigger: 0.75},
-                    transcend:              {enabled: false, misc: true, label: i18n('option.faith.transcend')},
+                    adore: { enabled: false, misc: true, label: i18n('option.faith.adore'), subTrigger: 0.75 },
+                    transcend: { enabled: false, misc: true, label: i18n('option.faith.transcend') },
                 },
                 // Which religious upgrades should be researched?
                 items: {
@@ -543,31 +543,31 @@ var run = function() {
                     // unicornUtopia:      {require: 'gold',        enabled: false, variant: 'z'},
                     // sunspire:           {require: 'gold',        enabled: false, variant: 'z'},
                     // UNICORN BUILDING END
-                    marker:             {require: 'unobtainium', enabled: false, variant: 'z', checkForReset: true, triggerForReset: -1},
-                    unicornGraveyard:   {require: false,         enabled: false, variant: 'z', checkForReset: true, triggerForReset: -1},
-                    unicornNecropolis:  {require: false,         enabled: false, variant: 'z', checkForReset: true, triggerForReset: -1},
-                    blackPyramid:       {require: 'unobtainium', enabled: false, variant: 'z', checkForReset: true, triggerForReset: -1},
+                    marker: { require: 'unobtainium', enabled: false, variant: 'z', checkForReset: true, triggerForReset: -1 },
+                    unicornGraveyard: { require: false, enabled: false, variant: 'z', checkForReset: true, triggerForReset: -1 },
+                    unicornNecropolis: { require: false, enabled: false, variant: 'z', checkForReset: true, triggerForReset: -1 },
+                    blackPyramid: { require: 'unobtainium', enabled: false, variant: 'z', checkForReset: true, triggerForReset: -1 },
                     // Order of the Sun is variant s.
-                    solarchant:         {require: 'faith',       enabled: true,  variant: 's', checkForReset: true, triggerForReset: -1},
-                    scholasticism:      {require: 'faith',       enabled: true,  variant: 's', checkForReset: true, triggerForReset: -1},
-                    goldenSpire:        {require: 'faith',       enabled: true,  variant: 's', checkForReset: true, triggerForReset: -1},
-                    sunAltar:           {require: 'faith',       enabled: true,  variant: 's', checkForReset: true, triggerForReset: -1},
-                    stainedGlass:       {require: 'faith',       enabled: true,  variant: 's', checkForReset: true, triggerForReset: -1},
-                    solarRevolution:    {require: 'faith',       enabled: true,  variant: 's', checkForReset: true, triggerForReset: -1},
-                    basilica:           {require: 'faith',       enabled: true,  variant: 's', checkForReset: true, triggerForReset: -1},
-                    templars:           {require: 'faith',       enabled: true,  variant: 's', checkForReset: true, triggerForReset: -1},
-                    apocripha:          {require: 'faith',       enabled: false, variant: 's', checkForReset: true, triggerForReset: -1},
-                    transcendence:      {require: 'faith',       enabled: true,  variant: 's', checkForReset: true, triggerForReset: -1},
+                    solarchant: { require: 'faith', enabled: true, variant: 's', checkForReset: true, triggerForReset: -1 },
+                    scholasticism: { require: 'faith', enabled: true, variant: 's', checkForReset: true, triggerForReset: -1 },
+                    goldenSpire: { require: 'faith', enabled: true, variant: 's', checkForReset: true, triggerForReset: -1 },
+                    sunAltar: { require: 'faith', enabled: true, variant: 's', checkForReset: true, triggerForReset: -1 },
+                    stainedGlass: { require: 'faith', enabled: true, variant: 's', checkForReset: true, triggerForReset: -1 },
+                    solarRevolution: { require: 'faith', enabled: true, variant: 's', checkForReset: true, triggerForReset: -1 },
+                    basilica: { require: 'faith', enabled: true, variant: 's', checkForReset: true, triggerForReset: -1 },
+                    templars: { require: 'faith', enabled: true, variant: 's', checkForReset: true, triggerForReset: -1 },
+                    apocripha: { require: 'faith', enabled: false, variant: 's', checkForReset: true, triggerForReset: -1 },
+                    transcendence: { require: 'faith', enabled: true, variant: 's', checkForReset: true, triggerForReset: -1 },
                     // Cryptotheology is variant c.
-                    blackObelisk:       {require: false,         enabled: false, variant: 'c', checkForReset: true, triggerForReset: -1},
-                    blackNexus:         {require: false,         enabled: false, variant: 'c', checkForReset: true, triggerForReset: -1},
-                    blackCore:          {require: false,         enabled: false, variant: 'c', checkForReset: true, triggerForReset: -1},
-                    singularity:        {require: false,         enabled: false, variant: 'c', checkForReset: true, triggerForReset: -1},
-                    blackLibrary:       {require: false,         enabled: false, variant: 'c', checkForReset: true, triggerForReset: -1},
-                    blackRadiance:      {require: false,         enabled: false, variant: 'c', checkForReset: true, triggerForReset: -1},
-                    blazar:             {require: false,         enabled: false, variant: 'c', checkForReset: true, triggerForReset: -1},
-                    darkNova:           {require: false,         enabled: false, variant: 'c', checkForReset: true, triggerForReset: -1},
-                    holyGenocide:       {require: false,         enabled: false, variant: 'c', checkForReset: true, triggerForReset: -1},
+                    blackObelisk: { require: false, enabled: false, variant: 'c', checkForReset: true, triggerForReset: -1 },
+                    blackNexus: { require: false, enabled: false, variant: 'c', checkForReset: true, triggerForReset: -1 },
+                    blackCore: { require: false, enabled: false, variant: 'c', checkForReset: true, triggerForReset: -1 },
+                    singularity: { require: false, enabled: false, variant: 'c', checkForReset: true, triggerForReset: -1 },
+                    blackLibrary: { require: false, enabled: false, variant: 'c', checkForReset: true, triggerForReset: -1 },
+                    blackRadiance: { require: false, enabled: false, variant: 'c', checkForReset: true, triggerForReset: -1 },
+                    blazar: { require: false, enabled: false, variant: 'c', checkForReset: true, triggerForReset: -1 },
+                    darkNova: { require: false, enabled: false, variant: 'c', checkForReset: true, triggerForReset: -1 },
+                    holyGenocide: { require: false, enabled: false, variant: 'c', checkForReset: true, triggerForReset: -1 },
                 }
             },
             build: {
@@ -586,62 +586,62 @@ var run = function() {
                 // property. For other buildings, the key of the item itself is used.
                 items: {
                     // housing
-                    hut:            {require: 'wood',        enabled: false, max:-1, checkForReset: true, triggerForReset: -1},
-                    logHouse:       {require: 'minerals',    enabled: false, max:-1, checkForReset: true, triggerForReset: -1},
-                    mansion:        {require: 'titanium',    enabled: false, max:-1, checkForReset: true, triggerForReset: -1},
+                    hut: { require: 'wood', enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
+                    logHouse: { require: 'minerals', enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
+                    mansion: { require: 'titanium', enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
 
                     // craft bonuses
-                    workshop:       {require: 'minerals',    enabled: true, max:-1, checkForReset: true, triggerForReset: -1},
-                    factory:        {require: 'titanium',    enabled: true, max:-1, checkForReset: true, triggerForReset: -1},
+                    workshop: { require: 'minerals', enabled: true, max: -1, checkForReset: true, triggerForReset: -1 },
+                    factory: { require: 'titanium', enabled: true, max: -1, checkForReset: true, triggerForReset: -1 },
 
                     // production
-                    field:          {require: 'catnip',      enabled: true, max:-1, checkForReset: true, triggerForReset: -1},
-                    pasture:        {require: 'catnip',      enabled: true, max:-1, stage: 0, checkForReset: true, triggerForReset: -1},
-                    solarFarm:      {require: 'titanium',    enabled: true, max:-1, stage: 1, name: 'pasture', checkForReset: true, triggerForReset: -1},
-                    mine:           {require: 'wood',        enabled: true, max:-1, checkForReset: true, triggerForReset: -1},
-                    lumberMill:     {require: 'minerals',    enabled: true, max:-1, checkForReset: true, triggerForReset: -1},
-                    aqueduct:       {require: 'minerals',    enabled: true, max:-1, stage: 0, checkForReset: true, triggerForReset: -1},
-                    hydroPlant:     {require: 'titanium',    enabled: true, max:-1, stage: 1, name: 'aqueduct', checkForReset: true, triggerForReset: -1},
-                    oilWell:        {require: 'coal',        enabled: true, max:-1, checkForReset: true, triggerForReset: -1},
-                    quarry:         {require: 'coal',        enabled: true, max:-1, checkForReset: true, triggerForReset: -1},
+                    field: { require: 'catnip', enabled: true, max: -1, checkForReset: true, triggerForReset: -1 },
+                    pasture: { require: 'catnip', enabled: true, max: -1, stage: 0, checkForReset: true, triggerForReset: -1 },
+                    solarFarm: { require: 'titanium', enabled: true, max: -1, stage: 1, name: 'pasture', checkForReset: true, triggerForReset: -1 },
+                    mine: { require: 'wood', enabled: true, max: -1, checkForReset: true, triggerForReset: -1 },
+                    lumberMill: { require: 'minerals', enabled: true, max: -1, checkForReset: true, triggerForReset: -1 },
+                    aqueduct: { require: 'minerals', enabled: true, max: -1, stage: 0, checkForReset: true, triggerForReset: -1 },
+                    hydroPlant: { require: 'titanium', enabled: true, max: -1, stage: 1, name: 'aqueduct', checkForReset: true, triggerForReset: -1 },
+                    oilWell: { require: 'coal', enabled: true, max: -1, checkForReset: true, triggerForReset: -1 },
+                    quarry: { require: 'coal', enabled: true, max: -1, checkForReset: true, triggerForReset: -1 },
 
                     // conversion
-                    smelter:        {require: 'minerals',    enabled: true,  max:-1, checkForReset: true, triggerForReset: -1},
-                    biolab:         {require: 'science',     enabled: false, max:-1, checkForReset: true, triggerForReset: -1},
-                    calciner:       {require: 'titanium',    enabled: false, max:-1, checkForReset: true, triggerForReset: -1},
-                    reactor:        {require: 'titanium',    enabled: false, max:-1, checkForReset: true, triggerForReset: -1},
-                    accelerator:    {require: 'titanium',    enabled: false, max:-1, checkForReset: true, triggerForReset: -1},
-                    steamworks:     {require: false,         enabled: false, max:-1, checkForReset: true, triggerForReset: -1},
-                    magneto:        {require: false,         enabled: false, max:-1, checkForReset: true, triggerForReset: -1},
+                    smelter: { require: 'minerals', enabled: true, max: -1, checkForReset: true, triggerForReset: -1 },
+                    biolab: { require: 'science', enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
+                    calciner: { require: 'titanium', enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
+                    reactor: { require: 'titanium', enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
+                    accelerator: { require: 'titanium', enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
+                    steamworks: { require: false, enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
+                    magneto: { require: false, enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
 
                     // science
-                    library:        {require: 'wood',        enabled: true, max:-1, stage: 0, checkForReset: true, triggerForReset: -1},
-                    dataCenter:     {require: false,         enabled: true, max:-1, stage: 1, name: 'library', checkForReset: true, triggerForReset: -1},
-                    academy:        {require: 'wood',        enabled: true, max:-1, checkForReset: true, triggerForReset: -1},
-                    observatory:    {require: 'iron',        enabled: true, max:-1, checkForReset: true, triggerForReset: -1},
+                    library: { require: 'wood', enabled: true, max: -1, stage: 0, checkForReset: true, triggerForReset: -1 },
+                    dataCenter: { require: false, enabled: true, max: -1, stage: 1, name: 'library', checkForReset: true, triggerForReset: -1 },
+                    academy: { require: 'wood', enabled: true, max: -1, checkForReset: true, triggerForReset: -1 },
+                    observatory: { require: 'iron', enabled: true, max: -1, checkForReset: true, triggerForReset: -1 },
 
                     // other
-                    amphitheatre:   {require: 'minerals',    enabled: true, max:-1, stage: 0, checkForReset: true, triggerForReset: -1},
-                    broadcastTower: {require: 'titanium',    enabled: true, max:-1, stage: 1, name: 'amphitheatre', checkForReset: true, triggerForReset: -1},
-                    tradepost:      {require: 'gold',        enabled: true, max:-1, checkForReset: true, triggerForReset: -1},
-                    chapel:         {require: 'minerals',    enabled: true, max:-1, checkForReset: true, triggerForReset: -1},
-                    temple:         {require: 'gold',        enabled: true, max:-1, checkForReset: true, triggerForReset: -1},
-                    mint:           {require: false,         enabled: false,max:-1,  checkForReset: true, triggerForReset: -1},
+                    amphitheatre: { require: 'minerals', enabled: true, max: -1, stage: 0, checkForReset: true, triggerForReset: -1 },
+                    broadcastTower: { require: 'titanium', enabled: true, max: -1, stage: 1, name: 'amphitheatre', checkForReset: true, triggerForReset: -1 },
+                    tradepost: { require: 'gold', enabled: true, max: -1, checkForReset: true, triggerForReset: -1 },
+                    chapel: { require: 'minerals', enabled: true, max: -1, checkForReset: true, triggerForReset: -1 },
+                    temple: { require: 'gold', enabled: true, max: -1, checkForReset: true, triggerForReset: -1 },
+                    mint: { require: false, enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
                     // unicornPasture: {require: false,         enabled: true},
-                    ziggurat:       {require: false,         enabled: true, max:-1, checkForReset: true, triggerForReset: -1},
-                    chronosphere:   {require: 'unobtainium', enabled: true, max:-1, checkForReset: true, triggerForReset: -1},
-                    aiCore:         {require: false,         enabled: false,max:-1,  checkForReset: true, triggerForReset: -1},
-                    brewery:        {require: false,         enabled: false,max:-1,  checkForReset: true, triggerForReset: -1},
+                    ziggurat: { require: false, enabled: true, max: -1, checkForReset: true, triggerForReset: -1 },
+                    chronosphere: { require: 'unobtainium', enabled: true, max: -1, checkForReset: true, triggerForReset: -1 },
+                    aiCore: { require: false, enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
+                    brewery: { require: false, enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
 
                     // storage
-                    barn:           {require: 'wood',        enabled: true, max:-1, checkForReset: true, triggerForReset: -1},
-                    harbor:         {require: false,         enabled: false,max:-1,  checkForReset: true, triggerForReset: -1},
-                    warehouse:      {require: false,         enabled: false,max:-1,  checkForReset: true, triggerForReset: -1},
-			
-		    // zebras
-                    zebraOutpost:   {require: 'bloodstone',  enabled: true, max:-1, checkForReset: true, triggerForReset: -1},
-                    zebraWorkshop:  {require: 'bloodstone',  enabled: false, max:-1, checkForReset: true, triggerForReset: -1},
-                    zebraForge:     {require: 'bloodstone',  enabled: false, max:-1, checkForReset: true, triggerForReset: -1}
+                    barn: { require: 'wood', enabled: true, max: -1, checkForReset: true, triggerForReset: -1 },
+                    harbor: { require: false, enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
+                    warehouse: { require: false, enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
+
+                    // zebras
+                    zebraOutpost: { require: 'bloodstone', enabled: true, max: -1, checkForReset: true, triggerForReset: -1 },
+                    zebraWorkshop: { require: 'bloodstone', enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
+                    zebraForge: { require: 'bloodstone', enabled: false, max: -1, checkForReset: true, triggerForReset: -1 }
                 }
             },
             space: {
@@ -652,48 +652,48 @@ var run = function() {
                 trigger: 0,
                 items: {
                     // Cath
-                    spaceElevator:  {require: 'unobtainium', enabled: false, max:-1, checkForReset: true, triggerForReset: -1},
-                    sattelite:      {require: 'titanium',    enabled: false, max:-1, checkForReset: true, triggerForReset: -1},
-                    spaceStation:   {require: 'oil',         enabled: false, max:-1, checkForReset: true, triggerForReset: -1},
+                    spaceElevator: { require: 'unobtainium', enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
+                    sattelite: { require: 'titanium', enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
+                    spaceStation: { require: 'oil', enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
 
                     // Moon
-                    moonOutpost:    {require: 'uranium',     enabled: false, max:-1, checkForReset: true, triggerForReset: -1},
-                    moonBase:       {require: 'unobtainium', enabled: false, max:-1, checkForReset: true, triggerForReset: -1},
+                    moonOutpost: { require: 'uranium', enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
+                    moonBase: { require: 'unobtainium', enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
 
                     // Dune
-                    planetCracker:  {require: 'science',     enabled: false, max:-1, checkForReset: true, triggerForReset: -1},
-                    hydrofracturer: {require: 'science',     enabled: false, max:-1, checkForReset: true, triggerForReset: -1},
-                    spiceRefinery:  {require: 'science',     enabled: false, max:-1, checkForReset: true, triggerForReset: -1},
+                    planetCracker: { require: 'science', enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
+                    hydrofracturer: { require: 'science', enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
+                    spiceRefinery: { require: 'science', enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
 
                     // Piscine
-                    researchVessel: {require: 'titanium',    enabled: false, max:-1, checkForReset: true, triggerForReset: -1},
-                    orbitalArray:   {require: 'eludium',     enabled: false, max:-1, checkForReset: true, triggerForReset: -1},
+                    researchVessel: { require: 'titanium', enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
+                    orbitalArray: { require: 'eludium', enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
 
                     // Helios
-                    sunlifter:          {require: 'eludium', enabled: false, max:-1, checkForReset: true, triggerForReset: -1},
-                    containmentChamber: {require: 'science', enabled: false, max:-1, checkForReset: true, triggerForReset: -1},
-                    heatsink:           {require: 'thorium', enabled: false, max:-1, checkForReset: true, triggerForReset: -1},
-                    sunforge:           {require: false,     enabled: false, max:-1, checkForReset: true, triggerForReset: -1},
+                    sunlifter: { require: 'eludium', enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
+                    containmentChamber: { require: 'science', enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
+                    heatsink: { require: 'thorium', enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
+                    sunforge: { require: false, enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
 
                     // T-Minus
-                    cryostation:    {require: 'eludium',     enabled: false, max:-1, checkForReset: true, triggerForReset: -1},
+                    cryostation: { require: 'eludium', enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
 
                     // Kairo
-                    spaceBeacon:    {require: 'antimatter',  enabled: false, max:-1, checkForReset: true, triggerForReset: -1},
+                    spaceBeacon: { require: 'antimatter', enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
 
                     // Yarn
-                    terraformingStation: {require: 'antimatter',  enabled: false, max:-1, checkForReset: true, triggerForReset: -1},
-                    hydroponics:         {require: 'kerosene',    enabled: false, max:-1, checkForReset: true, triggerForReset: -1},
+                    terraformingStation: { require: 'antimatter', enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
+                    hydroponics: { require: 'kerosene', enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
 
                     // Umbra
-                    hrHarvester:    {require: 'antimatter',  enabled: false, max:-1, checkForReset: true, triggerForReset: -1},
+                    hrHarvester: { require: 'antimatter', enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
 
                     // Charon
-                    entangler:    {require: 'antimatter',  enabled: false, max:-1, checkForReset: true, triggerForReset: -1},
+                    entangler: { require: 'antimatter', enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
 
                     // Centaurus
-                    tectonic:   {require: 'antimatter', enabled: false, max:-1, checkForReset: true, triggerForReset: -1},
-                    moltenCore: {require: 'uranium',    enabled: false, max:-1, checkForReset: true, triggerForReset: -1}
+                    tectonic: { require: 'antimatter', enabled: false, max: -1, checkForReset: true, triggerForReset: -1 },
+                    moltenCore: { require: 'uranium', enabled: false, max: -1, checkForReset: true, triggerForReset: -1 }
                 }
             },
             time: {
@@ -703,29 +703,31 @@ var run = function() {
                 items: {
                     // Variants denote whether these buildings fall within the Chronoforge or Void categories.
                     // Chronoforge has variant chrono.
-                    temporalBattery:     {require: false,          enabled: false, variant: 'chrono', checkForReset: true, triggerForReset: -1},
-                    blastFurnace:        {require: false,          enabled: false, variant: 'chrono', checkForReset: true, triggerForReset: -1},
-                    timeBoiler:          {require: false,          enabled: false, variant: 'chrono', checkForReset: true, triggerForReset: -1},
-                    temporalAccelerator: {require: false,          enabled: false, variant: 'chrono', checkForReset: true, triggerForReset: -1},
-                    temporalImpedance:   {require: false,          enabled: false, variant: 'chrono', checkForReset: true, triggerForReset: -1},
-                    ressourceRetrieval:  {require: false,          enabled: false, variant: 'chrono', checkForReset: true, triggerForReset: -1},
+                    temporalBattery: { require: false, enabled: false, variant: 'chrono', checkForReset: true, triggerForReset: -1 },
+                    blastFurnace: { require: false, enabled: false, variant: 'chrono', checkForReset: true, triggerForReset: -1 },
+                    timeBoiler: { require: false, enabled: false, variant: 'chrono', checkForReset: true, triggerForReset: -1 },
+                    temporalAccelerator: { require: false, enabled: false, variant: 'chrono', checkForReset: true, triggerForReset: -1 },
+                    temporalImpedance: { require: false, enabled: false, variant: 'chrono', checkForReset: true, triggerForReset: -1 },
+                    ressourceRetrieval: { require: false, enabled: false, variant: 'chrono', checkForReset: true, triggerForReset: -1 },
 
                     // Void Space has variant void.
-                    cryochambers:        {require: false,          enabled: false, variant: 'void', checkForReset: true, triggerForReset: -1},
-                    voidHoover:          {require: 'antimatter',   enabled: false, variant: 'void', checkForReset: true, triggerForReset: -1},
-                    voidRift:            {require: false,          enabled: false, variant: 'void', checkForReset: true, triggerForReset: -1},
-                    chronocontrol:       {require: 'temporalFlux', enabled: false, variant: 'void', checkForReset: true, triggerForReset: -1},
-                    voidResonator:       {require: false,          enabled: false, variant: 'void', checkForReset: true, triggerForReset: -1}
+                    cryochambers: { require: false, enabled: false, variant: 'void', checkForReset: true, triggerForReset: -1 },
+                    voidHoover: { require: 'antimatter', enabled: false, variant: 'void', checkForReset: true, triggerForReset: -1 },
+                    voidRift: { require: false, enabled: false, variant: 'void', checkForReset: true, triggerForReset: -1 },
+                    chronocontrol: { require: 'temporalFlux', enabled: false, variant: 'void', checkForReset: true, triggerForReset: -1 },
+                    voidResonator: { require: false, enabled: false, variant: 'void', checkForReset: true, triggerForReset: -1 }
                 }
             },
             timeCtrl: {
                 enabled: true,
                 items: {
-                    accelerateTime:     {enabled: true,  subTrigger: 1,     misc: true, label: i18n('option.accelerate')},
-                    timeSkip:           {enabled: false, subTrigger: 5,     misc: true, label: i18n('option.time.skip'), maximum: 50,
+                    accelerateTime: { enabled: true, subTrigger: 1, misc: true, label: i18n('option.accelerate') },
+                    timeSkip: {
+                        enabled: false, subTrigger: 5, misc: true, label: i18n('option.time.skip'), maximum: 50,
                         0: false, 1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false, 9: false,
-                        spring: true, summer: false, autumn: false, winter: false},
-                    reset:              {enabled: false, subTrigger: 99999, misc: true, label: i18n('option.time.reset')}
+                        spring: true, summer: false, autumn: false, winter: false
+                    },
+                    reset: { enabled: false, subTrigger: 99999, misc: true, label: i18n('option.time.reset') }
                 }
             },
             craft: {
@@ -750,25 +752,25 @@ var run = function() {
                 // across all crafted resources without wasting raw materials.
 
                 items: {
-                    wood:       {require: 'catnip',      max: 0, limited: true,  limRat: 0.5, enabled: true},
-                    beam:       {require: 'wood',        max: 0, limited: true,  limRat: 0.5, enabled: true},
-                    slab:       {require: 'minerals',    max: 0, limited: true,  limRat: 0.5, enabled: true},
-                    steel:      {require: 'coal',        max: 0, limited: true,  limRat: 0.5, enabled: true},
-                    plate:      {require: 'iron',        max: 0, limited: true,  limRat: 0.5, enabled: true},
-                    alloy:      {require: 'titanium',    max: 0, limited: true,  limRat: 0.5, enabled: true},
-                    concrate:   {require: false,         max: 0, limited: true,  limRat: 0.5, enabled: true},
-                    gear:       {require: false,         max: 0, limited: true,  limRat: 0.5, enabled: true},
-                    scaffold:   {require: false,         max: 0, limited: true,  limRat: 0.5, enabled: true},
-                    ship:       {require: false,         max: 0, limited: true,  limRat: 0.5, enabled: true},
-                    tanker:     {require: false,         max: 0, limited: true,  limRat: 0.5, enabled: true},
-                    parchment:  {require: false,         max: 0, limited: false, limRat: 0.5, enabled: true},
-                    manuscript: {require: 'culture',     max: 0, limited: true,  limRat: 0.5, enabled: true},
-                    compedium:  {require: 'science',     max: 0, limited: true,  limRat: 0.5, enabled: true},
-                    blueprint:  {require: 'science',     max: 0, limited: true,  limRat: 0.5, enabled: true},
-                    kerosene:   {require: 'oil',         max: 0, limited: true,  limRat: 0.5, enabled: true},
-                    megalith:   {require: false,         max: 0, limited: true,  limRat: 0.5, enabled: true},
-                    eludium:    {require: 'unobtainium', max: 0, limited: true,  limRat: 0.5, enabled: true},
-                    thorium:    {require: 'uranium',     max: 0, limited: true,  limRat: 0.5, enabled: true}
+                    wood: { require: 'catnip', max: 0, limited: true, limRat: 0.5, enabled: true },
+                    beam: { require: 'wood', max: 0, limited: true, limRat: 0.5, enabled: true },
+                    slab: { require: 'minerals', max: 0, limited: true, limRat: 0.5, enabled: true },
+                    steel: { require: 'coal', max: 0, limited: true, limRat: 0.5, enabled: true },
+                    plate: { require: 'iron', max: 0, limited: true, limRat: 0.5, enabled: true },
+                    alloy: { require: 'titanium', max: 0, limited: true, limRat: 0.5, enabled: true },
+                    concrate: { require: false, max: 0, limited: true, limRat: 0.5, enabled: true },
+                    gear: { require: false, max: 0, limited: true, limRat: 0.5, enabled: true },
+                    scaffold: { require: false, max: 0, limited: true, limRat: 0.5, enabled: true },
+                    ship: { require: false, max: 0, limited: true, limRat: 0.5, enabled: true },
+                    tanker: { require: false, max: 0, limited: true, limRat: 0.5, enabled: true },
+                    parchment: { require: false, max: 0, limited: false, limRat: 0.5, enabled: true },
+                    manuscript: { require: 'culture', max: 0, limited: true, limRat: 0.5, enabled: true },
+                    compedium: { require: 'science', max: 0, limited: true, limRat: 0.5, enabled: true },
+                    blueprint: { require: 'science', max: 0, limited: true, limRat: 0.5, enabled: true },
+                    kerosene: { require: 'oil', max: 0, limited: true, limRat: 0.5, enabled: true },
+                    megalith: { require: false, max: 0, limited: true, limRat: 0.5, enabled: true },
+                    eludium: { require: 'unobtainium', max: 0, limited: true, limRat: 0.5, enabled: true },
+                    thorium: { require: 'uranium', max: 0, limited: true, limRat: 0.5, enabled: true }
                 }
             },
             trade: {
@@ -781,58 +783,74 @@ var run = function() {
                 // are more effective during specific seasons.
                 // The *allowcapped* property allows us to trade even if the sold resources are at their cap.
                 items: {
-                    dragons:    {enabled: true,  require: 'titanium',    allowcapped: false,    limited: true,
-                        summer:  true,  autumn:  true,  winter:  true,          spring:      true},
+                    dragons: {
+                        enabled: true, require: 'titanium', allowcapped: false, limited: true,
+                        summer: true, autumn: true, winter: true, spring: true
+                    },
 
-                    zebras:     {enabled: true,  require: false,         allowcapped: false,    limited: true,
-                        summer:  true,  autumn:  true,  winter:  true,          spring:      true},
+                    zebras: {
+                        enabled: true, require: false, allowcapped: false, limited: true,
+                        summer: true, autumn: true, winter: true, spring: true
+                    },
 
-                    lizards:    {enabled: true,  require: 'minerals',    allowcapped: false,    limited: true,
-                        summer:  true,  autumn:  false, winter:  false,         spring:      false},
+                    lizards: {
+                        enabled: true, require: 'minerals', allowcapped: false, limited: true,
+                        summer: true, autumn: false, winter: false, spring: false
+                    },
 
-                    sharks:     {enabled: true,  require: 'iron',        allowcapped: false,    limited: true,
-                        summer:  false, autumn:  false, winter:  true,          spring:      false},
+                    sharks: {
+                        enabled: true, require: 'iron', allowcapped: false, limited: true,
+                        summer: false, autumn: false, winter: true, spring: false
+                    },
 
-                    griffins:   {enabled: true,  require: 'wood',        allowcapped: false,    limited: true,
-                        summer:  false, autumn:  true,  winter:  false,         spring:      false},
+                    griffins: {
+                        enabled: true, require: 'wood', allowcapped: false, limited: true,
+                        summer: false, autumn: true, winter: false, spring: false
+                    },
 
-                    nagas:      {enabled: true,  require: false,         allowcapped: false,    limited: true,
-                        summer:  false, autumn:  false, winter:  false,         spring:      true},
+                    nagas: {
+                        enabled: true, require: false, allowcapped: false, limited: true,
+                        summer: false, autumn: false, winter: false, spring: true
+                    },
 
-                    spiders:    {enabled: true,  require: false,         allowcapped: false,    limited: true,
-                        summer:  false, autumn:  true,  winter:  false,         spring:      false},
+                    spiders: {
+                        enabled: true, require: false, allowcapped: false, limited: true,
+                        summer: false, autumn: true, winter: false, spring: false
+                    },
 
-                    leviathans: {enabled: true,  require: 'unobtainium', allowcapped: true,     limited: true,
-                        summer:  true,  autumn:  true,  winter:  true,          spring:      true}
+                    leviathans: {
+                        enabled: true, require: 'unobtainium', allowcapped: true, limited: true,
+                        summer: true, autumn: true, winter: true, spring: true
+                    }
                 }
             },
             upgrade: {
                 //Should KS automatically upgrade?
                 enabled: false,
                 items: {
-                    upgrades:  {enabled: true, limited: true},
-                    techs:     {enabled: true},
-                    policies:  {enabled: false},
-                    races:     {enabled: true},
-                    missions:  {enabled: true, subTrigger: 12},
-                    buildings: {enabled: true},
+                    upgrades: { enabled: true, limited: true },
+                    techs: { enabled: true },
+                    policies: { enabled: false },
+                    races: { enabled: true },
+                    missions: { enabled: true, subTrigger: 12 },
+                    buildings: { enabled: true },
                 }
             },
             options: {
                 //Which misc options should be enabled?
                 enabled: true,
                 items: {
-                    observe:            {enabled: true,                    misc: true, label: i18n('option.observe')},
-                    festival:           {enabled: true,                    misc: true, label: i18n('option.festival')},
-                    shipOverride:       {enabled: true,                    misc: true, label: i18n('option.shipOverride')},
-                    autofeed:           {enabled: true,                    misc: true, label: i18n('option.autofeed')},
-                    hunt:               {enabled: true, subTrigger: 0.98,  misc: true, label: i18n('option.hunt')},
-                    promote:            {enabled: true,                    misc: true, label: i18n('option.promote')},
-                    crypto:             {enabled: true, subTrigger: 10000, misc: true, label: i18n('option.crypto')},
-                    fixCry:             {enabled: false,                   misc: true, label: i18n('option.fix.cry')},
-                    buildEmbassies:     {enabled: true, subTrigger: 0.9,   misc: true, label: i18n('option.embassies')},
-                    style:              {enabled: true,                    misc: true, label: i18n('option.style')},
-                    _steamworks:        {enabled: false,                   misc: true, label: i18n('option.steamworks')}
+                    observe: { enabled: true, misc: true, label: i18n('option.observe') },
+                    festival: { enabled: true, misc: true, label: i18n('option.festival') },
+                    shipOverride: { enabled: true, misc: true, label: i18n('option.shipOverride') },
+                    autofeed: { enabled: true, misc: true, label: i18n('option.autofeed') },
+                    hunt: { enabled: true, subTrigger: 0.98, misc: true, label: i18n('option.hunt') },
+                    promote: { enabled: true, misc: true, label: i18n('option.promote') },
+                    crypto: { enabled: true, subTrigger: 10000, misc: true, label: i18n('option.crypto') },
+                    fixCry: { enabled: false, misc: true, label: i18n('option.fix.cry') },
+                    buildEmbassies: { enabled: true, subTrigger: 0.9, misc: true, label: i18n('option.embassies') },
+                    style: { enabled: true, misc: true, label: i18n('option.style') },
+                    _steamworks: { enabled: false, misc: true, label: i18n('option.steamworks') }
                 }
             },
             distribute: {
@@ -841,15 +859,15 @@ var run = function() {
                 items: {
                     // dynamic priority. distribute to the job which have lowest (job.val / job.max) value.
                     // if all jobs reach the max, then distribute kittens to unlimited job.
-                    woodcutter: {enabled: true, max: 1, limited: false},
-                    farmer:     {enabled: true, max: 1, limited: false},
-                    scholar:    {enabled: true, max: 1, limited: false},
-                    hunter:     {enabled: true, max: 1, limited: false},
-                    miner:      {enabled: true, max: 1, limited: false},
-                    priest:     {enabled: true, max: 1, limited: false},
-                    geologist:  {enabled: true, max: 1, limited: false},
-                    engineer:   {enabled: true, max: 1, limited: false},
-                    leader:     {enabled: true, leaderJob: 'farmer', leaderTrait: 'manager'},
+                    woodcutter: { enabled: true, max: 1, limited: false },
+                    farmer: { enabled: true, max: 1, limited: false },
+                    scholar: { enabled: true, max: 1, limited: false },
+                    hunter: { enabled: true, max: 1, limited: false },
+                    miner: { enabled: true, max: 1, limited: false },
+                    priest: { enabled: true, max: 1, limited: false },
+                    geologist: { enabled: true, max: 1, limited: false },
+                    engineer: { enabled: true, max: 1, limited: false },
+                    leader: { enabled: true, leaderJob: 'farmer', leaderTrait: 'manager' },
                 }
 
             },
@@ -857,32 +875,32 @@ var run = function() {
                 //What log messages should be filtered?
                 enabled: false,
                 items: {
-                    buildFilter:     {enabled: false, filter: true, label: i18n('filter.build'),      variant: "ks-activity type_ks-build"},
-                    craftFilter:     {enabled: false, filter: true, label: i18n('filter.craft'),      variant: "ks-activity type_ks-craft"},
-                    upgradeFilter:   {enabled: false, filter: true, label: i18n('filter.upgrade'),    variant: "ks-activity type_ks-upgrade"},
-                    researchFilter:  {enabled: false, filter: true, label: i18n('filter.research'),   variant: "ks-activity type_ks-research"},
-                    tradeFilter:     {enabled: false, filter: true, label: i18n('filter.trade'),      variant: "ks-activity type_ks-trade"},
-                    huntFilter:      {enabled: false, filter: true, label: i18n('filter.hunt'),       variant: "ks-activity type_ks-hunt"},
-                    praiseFilter:    {enabled: false, filter: true, label: i18n('filter.praise'),     variant: "ks-activity type_ks-praise"},
-                    adoreFilter:     {enabled: false, filter: true, label: i18n('filter.adore'),      variant: "ks-activity type_ks-adore"},
-                    transcendFilter: {enabled: false, filter: true, label: i18n('filter.transcend'),  variant: "ks-activity type_ks-transcend"},
-                    faithFilter:     {enabled: false, filter: true, label: i18n('filter.faith'),      variant: "ks-activity type_ks-faith"},
-                    accelerateFilter:{enabled: false, filter: true, label: i18n('filter.accelerate'), variant: "ks-activity type_ks-accelerate"},
-                    timeSkipFilter:  {enabled: false, filter: true, label: i18n('filter.time.skip'),  variant: "ks-activity type_ks-timeSkip"},
-                    festivalFilter:  {enabled: false, filter: true, label: i18n('filter.festival'),   variant: "ks-activity type_ks-festival"},
-                    starFilter:      {enabled: false, filter: true, label: i18n('filter.star'),       variant: "ks-activity type_ks-star"},
-                    distributeFilter:{enabled: false, filter: true, label: i18n('filter.distribute'), variant: "ks-activity type_ks-distribute"},
-                    promoteFilter:   {enabled: false, filter: true, label: i18n('filter.promote'),    variant: "ks-activity type_ks-promote"},
-                    miscFilter:      {enabled: false, filter: true, label: i18n('filter.misc'),       variant: "ks-activity"}
+                    buildFilter: { enabled: false, filter: true, label: i18n('filter.build'), variant: "ks-activity type_ks-build" },
+                    craftFilter: { enabled: false, filter: true, label: i18n('filter.craft'), variant: "ks-activity type_ks-craft" },
+                    upgradeFilter: { enabled: false, filter: true, label: i18n('filter.upgrade'), variant: "ks-activity type_ks-upgrade" },
+                    researchFilter: { enabled: false, filter: true, label: i18n('filter.research'), variant: "ks-activity type_ks-research" },
+                    tradeFilter: { enabled: false, filter: true, label: i18n('filter.trade'), variant: "ks-activity type_ks-trade" },
+                    huntFilter: { enabled: false, filter: true, label: i18n('filter.hunt'), variant: "ks-activity type_ks-hunt" },
+                    praiseFilter: { enabled: false, filter: true, label: i18n('filter.praise'), variant: "ks-activity type_ks-praise" },
+                    adoreFilter: { enabled: false, filter: true, label: i18n('filter.adore'), variant: "ks-activity type_ks-adore" },
+                    transcendFilter: { enabled: false, filter: true, label: i18n('filter.transcend'), variant: "ks-activity type_ks-transcend" },
+                    faithFilter: { enabled: false, filter: true, label: i18n('filter.faith'), variant: "ks-activity type_ks-faith" },
+                    accelerateFilter: { enabled: false, filter: true, label: i18n('filter.accelerate'), variant: "ks-activity type_ks-accelerate" },
+                    timeSkipFilter: { enabled: false, filter: true, label: i18n('filter.time.skip'), variant: "ks-activity type_ks-timeSkip" },
+                    festivalFilter: { enabled: false, filter: true, label: i18n('filter.festival'), variant: "ks-activity type_ks-festival" },
+                    starFilter: { enabled: false, filter: true, label: i18n('filter.star'), variant: "ks-activity type_ks-star" },
+                    distributeFilter: { enabled: false, filter: true, label: i18n('filter.distribute'), variant: "ks-activity type_ks-distribute" },
+                    promoteFilter: { enabled: false, filter: true, label: i18n('filter.promote'), variant: "ks-activity type_ks-promote" },
+                    miscFilter: { enabled: false, filter: true, label: i18n('filter.misc'), variant: "ks-activity" }
                 }
             },
             resources: {
-                furs:        {enabled: true,  stock: 1000, checkForReset: false, stockForReset: Infinity},
-                timeCrystal: {enabled: false, stock: 0,    checkForReset: true,  stockForReset: 500000}
+                furs: { enabled: true, stock: 1000, checkForReset: false, stockForReset: Infinity },
+                timeCrystal: { enabled: false, stock: 0, checkForReset: true, stockForReset: 500000 }
             },
             policies: [],
             cache: {
-                cache:    [],
+                cache: [],
                 cacheSum: {}
             }
         }
@@ -898,7 +916,7 @@ var run = function() {
         if (options.auto.filter.enabled) {
             for (var filt in options.auto.filter.items) {
                 var filter = options.auto.filter.items[filt]
-                if (filter.enabled && filter.variant === args[1]) {return;}
+                if (filter.enabled && filter.variant === args[1]) { return; }
             }
         }
         var color = args.pop();
@@ -942,10 +960,10 @@ var run = function() {
     };
 
     // i18n support
-    var imessage = function(key, args, t) { message(i18n(key, args), t); }
-    var iactivity = function(key, args, t) { activity(i18n(key, args), t); }
-    var isummary = function(key, args, t) { summary(i18n(key, args), t); }
-    var iwarning = function(key, args, t) { warning(i18n(key, args), t); }
+    var imessage = function (key, args, t) { message(i18n(key, args), t); }
+    var iactivity = function (key, args, t) { activity(i18n(key, args), t); }
+    var isummary = function (key, args, t) { summary(i18n(key, args), t); }
+    var iwarning = function (key, args, t) { warning(i18n(key, args), t); }
 
     // Core Engine for Kitten Scientists
     // =================================
@@ -975,13 +993,13 @@ var run = function() {
         villageManager: undefined,
         cacheManager: undefined,
         loop: undefined,
-        start: function (msg=true) {
+        start: function (msg = true) {
             if (this.loop) return;
 
             this.loop = setInterval(this.iterate.bind(this), options.interval);
-            if(msg) imessage('status.ks.enable');
+            if (msg) imessage('status.ks.enable');
         },
-        stop: function (msg=true) {
+        stop: function (msg = true) {
             if (!this.loop) return;
 
             clearInterval(this.loop);
@@ -990,32 +1008,32 @@ var run = function() {
         },
         iterate: async function () {
             var subOptions = options.auto.options;
-            if (subOptions.enabled && subOptions.items.observe.enabled)                     {this.observeStars()};
-            if (options.auto.upgrade.enabled)                                               {this.upgrade()};
-            if (subOptions.enabled && subOptions.items.festival.enabled)                    {this.holdFestival()};
-            if (options.auto.build.enabled)                                                 {this.build()};
-            if (options.auto.space.enabled)                                                 {this.space()};
-            if (options.auto.craft.enabled)                                                 {this.craft()};
-            if (subOptions.enabled && subOptions.items.hunt.enabled)                        {this.setHunt()};
-            if (options.auto.trade.enabled)                                                 {this.trade()};
-            if (options.auto.faith.enabled)                                                 {this.worship()};
-            if (options.auto.time.enabled)                                                  {this.chrono()};
-            if (subOptions.enabled && subOptions.items.crypto.enabled)                      {this.crypto()};
-            if (subOptions.enabled && subOptions.items.autofeed.enabled)                    {this.autofeed()};
-            if (subOptions.enabled && subOptions.items.promote.enabled)                     {this.promote()};
-            if (options.auto.distribute.enabled)                                            {this.distribute()};
-            if (options.auto.timeCtrl.enabled)                                              {this.timeCtrl()};
-            if (subOptions.enabled)                                                         {this.miscOptions()};
-            if (options.auto.timeCtrl.enabled && options.auto.timeCtrl.items.reset.enabled) {await this.reset()};
+            if (subOptions.enabled && subOptions.items.observe.enabled) { this.observeStars() };
+            if (options.auto.upgrade.enabled) { this.upgrade() };
+            if (subOptions.enabled && subOptions.items.festival.enabled) { this.holdFestival() };
+            if (options.auto.build.enabled) { this.build() };
+            if (options.auto.space.enabled) { this.space() };
+            if (options.auto.craft.enabled) { this.craft() };
+            if (subOptions.enabled && subOptions.items.hunt.enabled) { this.setHunt() };
+            if (options.auto.trade.enabled) { this.trade() };
+            if (options.auto.faith.enabled) { this.worship() };
+            if (options.auto.time.enabled) { this.chrono() };
+            if (subOptions.enabled && subOptions.items.crypto.enabled) { this.crypto() };
+            if (subOptions.enabled && subOptions.items.autofeed.enabled) { this.autofeed() };
+            if (subOptions.enabled && subOptions.items.promote.enabled) { this.promote() };
+            if (options.auto.distribute.enabled) { this.distribute() };
+            if (options.auto.timeCtrl.enabled) { this.timeCtrl() };
+            if (subOptions.enabled) { this.miscOptions() };
+            if (options.auto.timeCtrl.enabled && options.auto.timeCtrl.items.reset.enabled) { await this.reset() };
         },
-        halfInterval: async function() {
+        halfInterval: async function () {
             return new Promise((resolve, reject) => {
                 setTimeout(() => {
                     this.hunt();
                 }, Math.floor(options.interval / 2))
             })
         },
-        setHunt: async function() {
+        setHunt: async function () {
             await this.halfInterval();
         },
         reset: async function () {
@@ -1042,13 +1060,13 @@ var run = function() {
                 }
                 return false;
             }
-            
+
             // check building
             var opt = options.auto.build.items;
             for (var name in opt)
                 if (opt[name].checkForReset) {
                     var bld = game.bld.get(name);
-                    checkedList.push({name: bld.label, trigger: opt[name].triggerForReset, val: bld.val})
+                    checkedList.push({ name: bld.label, trigger: opt[name].triggerForReset, val: bld.val })
                     if (opt[name].triggerForReset > 0) {
                         if (opt[name].triggerForReset > bld.val)
                             return;
@@ -1060,7 +1078,7 @@ var run = function() {
             opt = options.auto.unicorn.items.unicornPasture
             if (opt.checkForReset) {
                 var bld = game.bld.get('unicornPasture');
-                checkedList.push({name: bld.label, trigger: opt.triggerForReset, val: bld.val})
+                checkedList.push({ name: bld.label, trigger: opt.triggerForReset, val: bld.val })
                 if (opt.triggerForReset > 0) {
                     if (opt.triggerForReset > bld.val)
                         return;
@@ -1070,13 +1088,13 @@ var run = function() {
             }
             if (check(this.buildManager.manager.tab.buttons) || checkList.length)
                 return;
-            
+
             // check space
             opt = options.auto.space.items;
             for (var name in opt)
                 if (opt[name].checkForReset) {
                     var bld = game.space.getBuilding(name)
-                    checkedList.push({name: bld.label, trigger: opt[name].triggerForReset, val: bld.val})
+                    checkedList.push({ name: bld.label, trigger: opt[name].triggerForReset, val: bld.val })
                     if (opt[name].triggerForReset > 0) {
                         if (opt[name].triggerForReset > bld.val)
                             return;
@@ -1101,13 +1119,13 @@ var run = function() {
             }
             if (checkList.length)
                 return;
-            
+
             // check religion
             opt = options.auto.faith.items;
             for (var name in opt)
                 if (opt[name].checkForReset) {
                     var bld = this.religionManager.getBuild(name, opt[name].variant);
-                    checkedList.push({name: bld.label, trigger: opt[name].triggerForReset, val: bld.val})
+                    checkedList.push({ name: bld.label, trigger: opt[name].triggerForReset, val: bld.val })
                     if (opt[name].triggerForReset > 0) {
                         if (opt[name].triggerForReset > bld.val)
                             return;
@@ -1119,7 +1137,7 @@ var run = function() {
             for (var name in opt)
                 if (opt[name].checkForReset && opt[name].variant == 'z') {
                     var bld = this.religionManager.getBuild(name, 'z')
-                    checkedList.push({name: bld.label, trigger: opt[name].triggerForReset, val: bld.val})
+                    checkedList.push({ name: bld.label, trigger: opt[name].triggerForReset, val: bld.val })
                     if (opt[name].triggerForReset > 0) {
                         if (opt[name].triggerForReset > bld.val)
                             return;
@@ -1127,18 +1145,18 @@ var run = function() {
                         checkList.push(name);
                     }
                 }
-            if (check(this.religionManager.manager.tab.zgUpgradeButtons) || 
+            if (check(this.religionManager.manager.tab.zgUpgradeButtons) ||
                 check(this.religionManager.manager.tab.rUpgradeButtons) ||
                 check(this.religionManager.manager.tab.children[0].children[0].children) ||
                 checkList.length)
                 return;
-            
+
             // check time
             opt = options.auto.time.items;
             for (var name in opt)
                 if (opt[name].checkForReset) {
                     var bld = this.timeManager.getBuild(name, opt[name].variant);
-                    checkedList.push({name: bld.label, trigger: opt[name].triggerForReset, val: bld.val})
+                    checkedList.push({ name: bld.label, trigger: opt[name].triggerForReset, val: bld.val })
                     if (opt[name].triggerForReset > 0) {
                         if (opt[name].triggerForReset > bld.val)
                             return;
@@ -1151,21 +1169,21 @@ var run = function() {
                 check(this.timeManager.manager.tab.children[3].children[0].children) ||
                 checkList.length)
                 return;
-                
+
             // check resources
             opt = options.auto.resources;
             for (var name in opt)
                 if (opt[name].checkForReset) {
                     var res = game.resPool.get(name);
-                    checkedList.push({name: res.title, trigger: opt[name].stockForReset, val: res.value})
+                    checkedList.push({ name: res.title, trigger: opt[name].stockForReset, val: res.value })
                     if (opt[name].stockForReset > res.value)
                         return;
                 }
 
             // stop!
             this.stop(false);
-            
-            var sleep = function (time=1500) {
+
+            var sleep = function (time = 1500) {
                 return new Promise(resolve => {
                     if (!(options.auto.engine.enabled && options.auto.timeCtrl.enabled && options.auto.timeCtrl.items.reset.enabled))
                         throw 'canceled by player'
@@ -1179,7 +1197,7 @@ var run = function() {
                     var checked = checkedList[i];
                     imessage('reset.check', [checked.name, game.getDisplayValueExt(checked.trigger), game.getDisplayValueExt(checked.val)]);
                 }
-                
+
                 await sleep(0).then(() => {
                     imessage('reset.checked');
                     return sleep();
@@ -1231,7 +1249,7 @@ var run = function() {
 
             if (typeof kittenStorage.reset === 'undefined')
                 kittenStorage.reset = {};
-            
+
             kittenStorage.reset.karmaLastTime = game.resPool.get('karma').value;
             kittenStorage.reset.paragonLastTime = game.resPool.get('paragon').value;
             kittenStorage.reset.times += 1;
@@ -1239,7 +1257,7 @@ var run = function() {
             saveToKittenStorage();
 
             //=============================================================
-            for (var i = 0; i < game.challenges.challenges.length; i++){
+            for (var i = 0; i < game.challenges.challenges.length; i++) {
                 game.challenges.challenges[i].pending = false;
             }
             game.resetAutomatic();
@@ -1272,7 +1290,7 @@ var run = function() {
                 var season = game.calendar.season;
                 if (!optionVals.timeSkip[game.calendar.seasons[season].name])
                     break TimeSkip;
-                
+
                 var currentCycle = game.calendar.cycle;
                 if (!optionVals.timeSkip[currentCycle])
                     break TimeSkip;
@@ -1281,14 +1299,14 @@ var run = function() {
                 var heatNow = game.time.heat;
                 if (heatNow >= heatMax)
                     break TimeSkip;
-                
+
                 var yearsPerCycle = game.calendar.yearsPerCycle;
                 var remainingYearsCurrentCycle = yearsPerCycle - game.calendar.cycleYear;
                 var cyclesPerEra = game.calendar.cyclesPerEra;
                 var factor = game.challenges.getChallenge("1000Years").researched ? 5 : 10;
                 var canSkip = Math.min(Math.floor((heatMax - heatNow) / factor), optionVals.timeSkip.maximum);
                 var willSkip = 0;
-                if (canSkip < remainingYearsCurrentCycle){
+                if (canSkip < remainingYearsCurrentCycle) {
                     willSkip = canSkip;
                 } else {
                     willSkip += remainingYearsCurrentCycle;
@@ -1318,8 +1336,8 @@ var run = function() {
 
                 // game.village.sim.goldToPromote will check gold
                 // game.village.sim.promote check both gold and exp
-                if (game.village.sim.goldToPromote(rank, rank+1, gold-goldStock)[0] && game.village.sim.promote(leader, rank+1) == 1) {
-                    iactivity('act.promote', [rank+1], 'ks-promote');
+                if (game.village.sim.goldToPromote(rank, rank + 1, gold - goldStock)[0] && game.village.sim.promote(leader, rank + 1) == 1) {
+                    iactivity('act.promote', [rank + 1], 'ks-promote');
                     gamePage.tabs[1].censusPanel.census.renderGovernment(gamePage.tabs[1].censusPanel.census);
                     gamePage.tabs[1].censusPanel.census.update();
                     storeForSummary('promote', 1);
@@ -1332,21 +1350,21 @@ var run = function() {
             if (leaderVals.enabled && game.science.get('civil').researched && !game.challenges.isActive("anarchy")) {
                 var leaderJobName = leaderVals.leaderJob;
                 var traitName = leaderVals.leaderTrait;
-                var optionsTheocracy = (options.policies ===  undefined) ? false : options.policies.some(obj => obj === 'theocracy');
-                if (optionsTheocracy || game.science.getPolicy('theocracy').researched) {leaderJobName = "priest";}
+                var optionsTheocracy = (options.policies === undefined) ? false : options.policies.some(obj => obj === 'theocracy');
+                if (optionsTheocracy || game.science.getPolicy('theocracy').researched) { leaderJobName = "priest"; }
                 var distributeJob = game.village.getJob(leaderJobName);
                 if (game.village.leader == null || !(game.village.leader.job == leaderJobName && game.village.leader.trait.name == traitName)) {
                     var traitKittens = game.village.sim.kittens.filter(kitten => kitten.trait.name == traitName);
                     if (traitKittens.length != 0) {
                         if (distributeJob.unlocked && distributeJob.value < game.village.getJobLimit(leaderJobName)) {
-                            var correctLeaderKitten = traitKittens.sort(function(a, b) {return b.rank - a.rank != 0 ? b.rank - a.rank : b.exp - a.exp;})[0];
+                            var correctLeaderKitten = traitKittens.sort(function (a, b) { return b.rank - a.rank != 0 ? b.rank - a.rank : b.exp - a.exp; })[0];
                             if (distributeJob.value >= distributeItem[leaderJobName].max && distributeItem[leaderJobName].limited && distributeJob.value) {
                                 game.village.sim.removeJob(leaderJobName, 1);
                             }
                             var propGame = game.villageTab.censusPanel.census.game;
                             propGame.village.unassignJob(correctLeaderKitten);
                             game.village.getJob(leaderJobName).value++;
-                            correctLeaderKitten.jobs= leaderJobName;
+                            correctLeaderKitten.jobs = leaderJobName;
                             propGame.villageTab.censusPanel.census.makeLeader(correctLeaderKitten);
                             game.village.leader.job = leaderJobName;
                             game.workshopTab.updateTab();
@@ -1374,7 +1392,7 @@ var run = function() {
                 var val = game.village.jobs[i].value
                 var limited = options.auto.distribute.items[name].limited;
                 if (unlocked && enabled && val < maxGame && (!limited || val < maxKS)) {
-                    currentRatio = val/maxKS;
+                    currentRatio = val / maxKS;
                     if (currentRatio < minRatio) {
                         minRatio = currentRatio;
                         jobName = name;
@@ -1391,7 +1409,7 @@ var run = function() {
         autofeed: function () {
             var levi = game.diplomacy.get("leviathans");
             var nCorn = game.resPool.get("necrocorn");
-            if (!(levi.unlocked && nCorn.value > 0)) {return;}
+            if (!(levi.unlocked && nCorn.value > 0)) { return; }
             if (nCorn.value >= 1) {
                 if (levi.energy < game.diplomacy.getMarkerCap()) {
                     game.diplomacy.feedElders();
@@ -1410,7 +1428,7 @@ var run = function() {
             var coinPrice = game.calendar.cryptoPrice;
             var previousRelic = game.resPool.get('relic').value;
             var previousCoin = game.resPool.get('blackcoin').value;
-            if((!game.science.get("blackchain").researched && !previousCoin > 0) && !game.diplomacy.get("leviathans").unlocked) {return;}
+            if ((!game.science.get("blackchain").researched && !previousCoin > 0) && !game.diplomacy.get("leviathans").unlocked) { return; }
             var exchangedCoin = 0.0;
             var exchangedRelic = 0.0;
             var waitForBestPrice = false;
@@ -1424,9 +1442,9 @@ var run = function() {
 
                 // function name changed in v1.4.8.0
                 if (typeof game.diplomacy.buyEcoin === 'function') {
-                  game.diplomacy.buyEcoin();
+                    game.diplomacy.buyEcoin();
                 } else {
-                  game.diplomacy.buyBcoin();
+                    game.diplomacy.buyBcoin();
                 }
 
                 currentCoin = game.resPool.get('blackcoin').value;
@@ -1440,9 +1458,9 @@ var run = function() {
 
                 // function name changed in v1.4.8.0
                 if (typeof game.diplomacy.sellEcoin === 'function') {
-                  game.diplomacy.sellEcoin();
+                    game.diplomacy.sellEcoin();
                 } else {
-                  game.diplomacy.sellBcoin();
+                    game.diplomacy.sellBcoin();
                 }
 
                 currentRelic = game.resPool.get('relic').value;
@@ -1457,35 +1475,33 @@ var run = function() {
             var buildManager = this.buildManager;
             var craftManager = this.craftManager;
             var option = options.auto.faith.addition;
-            
+
             if (option.bestUnicornBuilding.enabled) {
                 var bestUnicornBuilding = this.getBestUnicornBuilding();
                 if (bestUnicornBuilding) {
                     if (bestUnicornBuilding == 'unicornPasture')
                         buildManager.build(bestUnicornBuilding, undefined, 1);
-                    else
-                    {
-                        var btn = manager.getBuildButton(bestUnicornBuilding, 'z');                        
+                    else {
+                        var btn = manager.getBuildButton(bestUnicornBuilding, 'z');
                         for (var i in btn.model.prices)
-                            if (btn.model.prices[i].name=='tears')
+                            if (btn.model.prices[i].name == 'tears')
                                 var tearNeed = btn.model.prices[i].val;
                         var tearHave = craftManager.getValue('tears') - craftManager.getStock('tears');
-                        if (tearNeed > tearHave)
-                        {
+                        if (tearNeed > tearHave) {
                             // if no ziggurat, getBestUnicornBuilding will return unicornPasture
                             var maxSacrifice = Math.floor((craftManager.getValue('unicorns') - craftManager.getStock('unicorns')) / 2500);
-                            var needSacrifice = Math.ceil((tearNeed-tearHave) / game.bld.getBuildingExt('ziggurat').meta.on);
+                            var needSacrifice = Math.ceil((tearNeed - tearHave) / game.bld.getBuildingExt('ziggurat').meta.on);
                             if (needSacrifice < maxSacrifice)
-                            game.religionTab.sacrificeBtn.controller._transform(game.religionTab.sacrificeBtn.model, needSacrifice);
+                                game.religionTab.sacrificeBtn.controller._transform(game.religionTab.sacrificeBtn.model, needSacrifice);
                             // iactivity?
                         }
                         religionManager.build(bestUnicornBuilding, 'z', 1);
                     }
                 }
             } else {
-                builds = Object.assign({}, builds, Object.fromEntries(Object.entries(options.auto.unicorn.items).filter(([k,v]) => v.variant!='zp')));
+                builds = Object.assign({}, builds, Object.fromEntries(Object.entries(options.auto.unicorn.items).filter(([k, v]) => v.variant != 'zp')));
                 if (options.auto.unicorn.items.unicornPasture.enabled)
-                    this.build({unicornPasture: {require: false, enabled: true}});
+                    this.build({ unicornPasture: { require: false, enabled: true } });
             }
             // religion build
             this._worship(builds);
@@ -1500,16 +1516,15 @@ var run = function() {
                 var tt = transcendenceReached ? game.religion.transcendenceTier : 0;
 
                 // Transcend
-                if (option.transcend.enabled && transcendenceReached) 
-                {
+                if (option.transcend.enabled && transcendenceReached) {
                     var adoreIncreaceRatio = Math.pow((tt + 2) / (tt + 1), 2);
                     var needNextLevel = game.religion._getTranscendTotalPrice(tt + 1) - game.religion._getTranscendTotalPrice(tt);
 
                     var x = needNextLevel;
                     var k = adoreIncreaceRatio;
-                    var epiphanyRecommend = (1-k+Math.sqrt(80*(k*k-1)*x+(k-1)*(k-1)))*k/(40*(k+1)*(k+1)*(k-1))+x+x/(k*k-1);
+                    var epiphanyRecommend = (1 - k + Math.sqrt(80 * (k * k - 1) * x + (k - 1) * (k - 1))) * k / (40 * (k + 1) * (k + 1) * (k - 1)) + x + x / (k * k - 1);
 
-                    if(epiphany > epiphanyRecommend) {
+                    if (epiphany > epiphanyRecommend) {
 
                         // code copy from kittens game's religion.js: game.religion.transcend()
                         // game.religion.transcend() need confirm by player
@@ -1540,11 +1555,11 @@ var run = function() {
                 if (option.adore.enabled && game.religion.getRU('apocripha').on) {
                     // game version: 1.4.8.1
                     var maxSolarRevolution = 10 + game.getEffect("solarRevolutionLimit")
-                    var triggerSolarRevolution = maxSolarRevolution*option.adore.subTrigger;
+                    var triggerSolarRevolution = maxSolarRevolution * option.adore.subTrigger;
                     var epiphanyInc = worship / 1000000 * (tt + 1) * (tt + 1) * 1.01;
                     var epiphanyAfterAdore = epiphany + epiphanyInc;
-                    var worshipAfterAdore = 0.01 + faith.value*(1 + game.getUnlimitedDR(epiphanyAfterAdore, 0.1)*0.1);
-                    var solarRevolutionAdterAdore = game.getLimitedDR(game.getUnlimitedDR(worshipAfterAdore, 1000)/100, maxSolarRevolution);
+                    var worshipAfterAdore = 0.01 + faith.value * (1 + game.getUnlimitedDR(epiphanyAfterAdore, 0.1) * 0.1);
+                    var solarRevolutionAdterAdore = game.getLimitedDR(game.getUnlimitedDR(worshipAfterAdore, 1000) / 100, maxSolarRevolution);
                     if (solarRevolutionAdterAdore >= triggerSolarRevolution) {
 
                         game.religion._resetFaithInternal(1.01);
@@ -1602,10 +1617,10 @@ var run = function() {
                 }
             }
 
-            if (refreshRequired) {game.ui.render();}
+            if (refreshRequired) { game.ui.render(); }
         },
         chrono: function () {
-            if (!game.timeTab.visible) {return;}
+            if (!game.timeTab.visible) { return; }
             var builds = options.auto.time.items;
             var buildManager = this.timeManager;
             var craftManager = this.craftManager;
@@ -1634,7 +1649,7 @@ var run = function() {
                 }
             }
 
-            if (refreshRequired) {game.ui.render();}
+            if (refreshRequired) { game.ui.render(); }
         },
         upgrade: function () {
             var upgrades = options.auto.upgrade.items;
@@ -1649,19 +1664,19 @@ var run = function() {
 
             if (upgrades.upgrades.enabled && gamePage.tabs[3].visible) {
                 var work = game.workshop.upgrades;
-                var noup = ["factoryOptimization","factoryRobotics","spaceEngineers","aiEngineers","chronoEngineers","steelPlants","amFission","biofuel","gmo","factoryAutomation","advancedAutomation","invisibleBlackHand"];
+                var noup = ["factoryOptimization", "factoryRobotics", "spaceEngineers", "aiEngineers", "chronoEngineers", "steelPlants", "amFission", "biofuel", "gmo", "factoryAutomation", "advancedAutomation", "invisibleBlackHand"];
                 workLoop:
                 for (var upg in work) {
-                    if (work[upg].researched || !work[upg].unlocked) {continue;}
+                    if (work[upg].researched || !work[upg].unlocked) { continue; }
 
                     var prices = dojo.clone(work[upg].prices); // game.village.getEffectLeader will override its argument
                     prices = game.village.getEffectLeader("scientist", prices);
                     for (var resource in prices) {
-                        if (craftManager.getValueAvailable(prices[resource].name, true) < prices[resource].val) {continue workLoop;}
+                        if (craftManager.getValueAvailable(prices[resource].name, true) < prices[resource].val) { continue workLoop; }
                     }
-                    if (upgrades.upgrades.limited){
+                    if (upgrades.upgrades.limited) {
                         for (var name in noup) {
-                            if (work[upg].name == noup[name]) {continue workLoop;}
+                            if (work[upg].name == noup[name]) { continue workLoop; }
                         }
                     }
                     upgradeManager.build(work[upg], 'workshop');
@@ -1672,65 +1687,65 @@ var run = function() {
                 var tech = game.science.techs;
                 techLoop:
                 for (var upg in tech) {
-                    if (tech[upg].researched || !tech[upg].unlocked) {continue;}
+                    if (tech[upg].researched || !tech[upg].unlocked) { continue; }
 
                     var prices = dojo.clone(tech[upg].prices);
                     prices = game.village.getEffectLeader("scientist", prices);
                     for (var resource in prices) {
-                        if (craftManager.getValueAvailable(prices[resource].name, true) < prices[resource].val) {continue techLoop;}
+                        if (craftManager.getValueAvailable(prices[resource].name, true) < prices[resource].val) { continue techLoop; }
                     }
                     upgradeManager.build(tech[upg], 'science');
                 }
             }
 
             if (upgrades.policies.enabled && gamePage.tabs[2].visible) {
-                    // write a function to make breaking big loop easier
-                    (function (){
-                        var policies = game.science.policies;
-                        var lastIndex = 0;
-                        var length = policies.length;
-                        var toResearch = [];
+                // write a function to make breaking big loop easier
+                (function () {
+                    var policies = game.science.policies;
+                    var lastIndex = 0;
+                    var length = policies.length;
+                    var toResearch = [];
 
-                        // A **little** more efficient than game.science.getPolicy if options.policies is right order
-                        for (var i in options.policies) {
-                            targetName = options.policies[i];
-                            for (var j in policies) {
-                                j = parseInt(j); // fuck js
-                                policy = policies[(j+lastIndex) % length];
-                                if (policy.name == targetName) {
-                                    lastIndex = j+lastIndex+1;
-                                    if (!policy.researched) {
-                                        if (policy.blocked)
-                                            return;
-                                        if (policy.unlocked) {
-                                            if (policy.requiredLeaderJob == undefined ||
-                                               (game.village.leader != null && game.village.leader.job == policy.requiredLeaderJob)
-                                            ){
-                                                toResearch.push(policy);
-                                            }
+                    // A **little** more efficient than game.science.getPolicy if options.policies is right order
+                    for (var i in options.policies) {
+                        targetName = options.policies[i];
+                        for (var j in policies) {
+                            j = parseInt(j); // fuck js
+                            policy = policies[(j + lastIndex) % length];
+                            if (policy.name == targetName) {
+                                lastIndex = j + lastIndex + 1;
+                                if (!policy.researched) {
+                                    if (policy.blocked)
+                                        return;
+                                    if (policy.unlocked) {
+                                        if (policy.requiredLeaderJob == undefined ||
+                                            (game.village.leader != null && game.village.leader.job == policy.requiredLeaderJob)
+                                        ) {
+                                            toResearch.push(policy);
                                         }
                                     }
-                                    break;
                                 }
+                                break;
                             }
                         }
-                        for (var i in toResearch) {
-                            upgradeManager.build(toResearch[i], 'policy');
-                        }
-                    })();
+                    }
+                    for (var i in toResearch) {
+                        upgradeManager.build(toResearch[i], 'policy');
+                    }
+                })();
             }
 
             if (upgrades.missions.enabled && gamePage.tabs[6].visible) {
                 var missionsLength = Math.min(game.space.meta[0].meta.length, upgrades.missions.subTrigger);
                 var missions = game.space.meta[0].meta;
                 missionLoop:
-                for (var i = 0; i < missionsLength ; i++) {
-                    if (!(missions[i].unlocked && missions[i].val < 1)) {continue;}
+                for (var i = 0; i < missionsLength; i++) {
+                    if (!(missions[i].unlocked && missions[i].val < 1)) { continue; }
 
                     var model = this.spaceManager.manager.tab.GCPanel.children[i];
                     var prices = model.model.prices;
                     for (var resource in prices) {
-                        if (craftManager.getValueAvailable(prices[resource].name, true) < prices[resource].val) {continue missionLoop;}
+                        if (craftManager.getValueAvailable(prices[resource].name, true) < prices[resource].val) { continue missionLoop; }
                     }
                     model.domNode.click();
                     if (i === 7 || i === 12) {
@@ -1796,7 +1811,7 @@ var run = function() {
                     if (!game.diplomacy.get('dragons').unlocked && game.science.get("nuclearFission").researched) {
                         if (manpower >= 1000) {
                             game.resPool.get('manpower').value -= 1000;
-                            iactivity('upgrade.race', [ game.diplomacy.unlockRandomRace().title], 'ks-upgrade');
+                            iactivity('upgrade.race', [game.diplomacy.unlockRandomRace().title], 'ks-upgrade');
                             manpower -= 1000;
                             game.ui.render();
                         }
@@ -1805,8 +1820,8 @@ var run = function() {
             }
 
             if (upgrades.buildings.enabled) {
-                var pastures = (game.bld.getBuildingExt('pasture').meta.stage === 0) ? game.bld.getBuildingExt('pasture').meta.val: 0;
-                var aqueducts = (game.bld.getBuildingExt('aqueduct').meta.stage === 0) ? game.bld.getBuildingExt('aqueduct').meta.val: 0;
+                var pastures = (game.bld.getBuildingExt('pasture').meta.stage === 0) ? game.bld.getBuildingExt('pasture').meta.val : 0;
+                var aqueducts = (game.bld.getBuildingExt('aqueduct').meta.stage === 0) ? game.bld.getBuildingExt('aqueduct').meta.val : 0;
 
                 var pastureMeta = game.bld.getBuildingExt('pasture').meta;
                 if (pastureMeta.stage === 0) {
@@ -1857,7 +1872,7 @@ var run = function() {
                 if (libraryMeta.stage === 0) {
                     if (libraryMeta.stages[1].stageUnlocked) {
                         var enCon = (game.workshop.get('cryocomputing').researched) ? 1 : 2;
-                        if (game.challenges.isActive('energy')) {enCon *= 2 * (1 + game.getEffect("energyConsumptionIncrease"));}
+                        if (game.challenges.isActive('energy')) { enCon *= 2 * (1 + game.getEffect("energyConsumptionIncrease")); }
                         var libToDat = 3;
                         if (game.workshop.get('uplink').researched) {
                             libToDat *= (1 + game.bld.get('biolab').val * game.getEffect('uplinkDCRatio'));
@@ -1936,7 +1951,7 @@ var run = function() {
                     refreshRequired = true;
                 }
             }
-            if (refreshRequired) {game.ui.render();}
+            if (refreshRequired) { game.ui.render(); }
         },
         space: function () {
             var builds = options.auto.space.items;
@@ -1963,7 +1978,7 @@ var run = function() {
                     refreshRequired = true;
                 }
             }
-            if (refreshRequired) {game.ui.render();}
+            if (refreshRequired) { game.ui.render(); }
         },
         craft: function () {
             var crafts = options.auto.craft.items;
@@ -1978,7 +1993,7 @@ var run = function() {
                 var amount = 0;
                 // Ensure that we have reached our cap
                 if (current && current.value > craft.max) continue;
-                if (!manager.singleCraftPossible(name)) {continue;}
+                if (!manager.singleCraftPossible(name)) { continue; }
                 // Craft the resource if we meet the trigger requirement
                 if (!require || trigger <= require.value / require.maxValue) {
                     amount = manager.getLowestCraftAmount(name, craft.limited, craft.limRat, true);
@@ -1991,18 +2006,18 @@ var run = function() {
             }
         },
         holdFestival: function () {
-            if (!(game.science.get('drama').researched && game.calendar.festivalDays < 400)) {return;}
-            if (!game.prestige.getPerk('carnivals').researched && game.calendar.festivalDays > 0) {return;}
+            if (!(game.science.get('drama').researched && game.calendar.festivalDays < 400)) { return; }
+            if (!game.prestige.getPerk('carnivals').researched && game.calendar.festivalDays > 0) { return; }
 
             var craftManager = this.craftManager;
             if (craftManager.getValueAvailable('manpower', true) < 1500 || craftManager.getValueAvailable('culture', true) < 5000
-                || craftManager.getValueAvailable('parchment', true) < 2500) {return;}
+                || craftManager.getValueAvailable('parchment', true) < 2500) { return; }
 
             var catpowProf = 4000 * craftManager.getTickVal(craftManager.getResource('manpower'), true) > 1500;
             var cultureProf = 4000 * craftManager.getTickVal(craftManager.getResource('culture'), true) > 5000;
             var parchProf = 4000 * craftManager.getTickVal(craftManager.getResource('parchment'), true) > 2500;
 
-            if (!(catpowProf && cultureProf && parchProf)) {return;}
+            if (!(catpowProf && cultureProf && parchProf)) { return; }
 
             // Render the tab to make sure that the buttons actually exist in the DOM. Otherwise we can't click them.
             this.villageManager.render();
@@ -2019,7 +2034,7 @@ var run = function() {
             }
         },
         observeStars: function () {
-            if (game.calendar.observeBtn != null){
+            if (game.calendar.observeBtn != null) {
                 game.calendar.observeHandler();
                 iactivity('act.observe', [], 'ks-star');
                 storeForSummary('stars', 1);
@@ -2027,15 +2042,15 @@ var run = function() {
         },
         hunt: function () {
             var manpower = this.craftManager.getResource('manpower');
-            if (manpower.value < 100 || game.challenges.isActive("pacifism")) {return;}
+            if (manpower.value < 100 || game.challenges.isActive("pacifism")) { return; }
 
             if (options.auto.options.items.hunt.subTrigger <= manpower.value / manpower.maxValue) {
                 // No way to send only some hunters. Thus, we hunt with everything
-                var huntCount = Math.floor(manpower.value/100);
+                var huntCount = Math.floor(manpower.value / 100);
                 storeForSummary('hunt', huntCount);
                 iactivity('act.hunt', [huntCount], 'ks-hunt');
 
-                var huntCount = Math.floor(manpower.value/100);
+                var huntCount = Math.floor(manpower.value / 100);
                 var aveOutput = this.craftManager.getAverageHunt();
                 var trueOutput = {};
 
@@ -2044,7 +2059,7 @@ var run = function() {
                     trueOutput[out] = (res.maxValue > 0) ? Math.min(aveOutput[out] * huntCount, Math.max(res.maxValue - res.value, 0)) : aveOutput[out] * huntCount;
                 }
 
-                this.cacheManager.pushToCache({'materials': trueOutput, 'timeStamp': game.timer.ticksTotal});
+                this.cacheManager.pushToCache({ 'materials': trueOutput, 'timeStamp': game.timer.ticksTotal });
 
                 game.village.huntAll();
             }
@@ -2059,7 +2074,9 @@ var run = function() {
 
             tradeManager.manager.render();
 
-            if (!tradeManager.singleTradePossible(undefined)) {return;}
+            if (!tradeManager.singleTradePossible(undefined)) {
+                return;
+            }
 
             var season = game.calendar.getCurSeason().name;
 
@@ -2071,10 +2088,10 @@ var run = function() {
                 if (!trade.enabled) continue;
                 if (!trade[season]) continue;
                 var race = tradeManager.getRace(name);
-                if (!race.unlocked) {continue;}
+                if (!race.unlocked) { continue; }
                 var button = tradeManager.getTradeButton(race.name);
-                if (!button.model.enabled) {continue;}
-                if (!tradeManager.singleTradePossible(name)) {continue;}
+                if (!button.model.enabled) { continue; }
+                if (!tradeManager.singleTradePossible(name)) { continue; }
 
                 var require = !trade.require ? false : craftManager.getResource(trade.require);
 
@@ -2087,14 +2104,14 @@ var run = function() {
                 }
             }
 
-            if (trades.length === 0) {return;}
+            if (trades.length === 0) { return; }
 
             // Figure out how much we can currently trade
             var maxTrades = tradeManager.getLowestTradeAmount(undefined, true, false);
 
             // Distribute max trades without starving any race
 
-            if (maxTrades < 1) {return;}
+            if (maxTrades < 1) { return; }
 
             var maxByRace = [];
             for (var i = 0; i < trades.length; i++) {
@@ -2111,13 +2128,13 @@ var run = function() {
                 maxByRace[i] = tradePos;
             }
 
-            if (trades.length === 0) {return;}
+            if (trades.length === 0) { return; }
 
             var tradesDone = {};
             while (trades.length > 0 && maxTrades >= 1) {
                 if (maxTrades < trades.length) {
                     var j = Math.floor(Math.random() * trades.length);
-                    if (!tradesDone[trades[j]]) {tradesDone[trades[j]] = 0;}
+                    if (!tradesDone[trades[j]]) { tradesDone[trades[j]] = 0; }
                     tradesDone[trades[j]] += 1;
                     maxTrades -= 1;
                     trades.splice(j, 1);
@@ -2132,13 +2149,13 @@ var run = function() {
                         minTradePos = i;
                     }
                 }
-                if (!tradesDone[trades[minTradePos]]) {tradesDone[trades[minTradePos]] = 0;}
+                if (!tradesDone[trades[minTradePos]]) { tradesDone[trades[minTradePos]] = 0; }
                 tradesDone[trades[minTradePos]] += minTrades;
                 maxTrades -= minTrades;
                 trades.splice(minTradePos, 1);
                 maxByRace.splice(minTradePos, 1);
             }
-            if (tradesDone.length === 0) {return;}
+            if (tradesDone.length === 0) { return; }
 
             var tradeNet = {};
             for (var name in tradesDone) {
@@ -2146,19 +2163,19 @@ var run = function() {
 
                 var materials = tradeManager.getMaterials(name);
                 for (var mat in materials) {
-                    if (!tradeNet[mat]) {tradeNet[mat] = 0;}
+                    if (!tradeNet[mat]) { tradeNet[mat] = 0; }
                     tradeNet[mat] -= materials[mat] * tradesDone[name];
                 }
 
                 var meanOutput = tradeManager.getAverageTrade(race);
                 for (var out in meanOutput) {
                     var res = craftManager.getResource(out);
-                    if (!tradeNet[out]) {tradeNet[out] = 0;}
+                    if (!tradeNet[out]) { tradeNet[out] = 0; }
                     tradeNet[out] += (res.maxValue > 0) ? Math.min(meanOutput[out] * tradesDone[name], Math.max(res.maxValue - res.value, 0)) : meanOutput[out] * tradesDone[name];
                 }
             }
 
-            cacheManager.pushToCache({'materials': tradeNet, 'timeStamp': game.timer.ticksTotal});
+            cacheManager.pushToCache({ 'materials': tradeNet, 'timeStamp': game.timer.ticksTotal });
 
             for (var name in tradesDone) {
                 if (tradesDone[name] > 0) {
@@ -2182,20 +2199,20 @@ var run = function() {
                     var bulkTracker = [];
 
                     for (var i = 0; i < racePanels.length; i++) {
-                        if (!racePanels[i].embassyButton) {continue;}
+                        if (!racePanels[i].embassyButton) { continue; }
                         var name = racePanels[i].race.name;
                         var race = game.diplomacy.get(name);
                         var priceCoeficient = 1 - game.getEffect("embassyCostReduction");
-                        embassyBulk[name] = {'val': 0, 'basePrice': race.embassyPrices[0].val * priceCoeficient, 'currentEm': race.embassyLevel, 'priceSum': 0, 'race': race};
+                        embassyBulk[name] = { 'val': 0, 'basePrice': race.embassyPrices[0].val * priceCoeficient, 'currentEm': race.embassyLevel, 'priceSum': 0, 'race': race };
                         bulkTracker.push(name);
                     }
 
-                    if (bulkTracker.length === 0) {break AutoEmbassy;}
+                    if (bulkTracker.length === 0) { break AutoEmbassy; }
 
                     var refreshRequired = false;
 
                     while (bulkTracker.length > 0) {
-                        for (var i=0; i < bulkTracker.length; i++) {
+                        for (var i = 0; i < bulkTracker.length; i++) {
                             var name = bulkTracker[i];
                             var emBulk = embassyBulk[name];
                             var nextPrice = emBulk.basePrice * Math.pow(1.15, emBulk.currentEm + emBulk.val + game.getEffect("embassyFakeBought"));
@@ -2213,9 +2230,9 @@ var run = function() {
 
                     for (var name in embassyBulk) {
                         var emBulk = embassyBulk[name];
-                        if (emBulk.val === 0) {continue;}
+                        if (emBulk.val === 0) { continue; }
                         var cultureVal = craftManager.getValueAvailable('culture', true);
-                        if (emBulk.priceSum > cultureVal) {warning('Something has gone horribly wrong.' + [emBulk.priceSum, cultureVal]);}
+                        if (emBulk.priceSum > cultureVal) { warning('Something has gone horribly wrong.' + [emBulk.priceSum, cultureVal]); }
                         game.resPool.resources[13].value -= emBulk.priceSum;
                         emBulk.race.embassyLevel += emBulk.val;
                         storeForSummary('embassy', emBulk.val);
@@ -2226,7 +2243,7 @@ var run = function() {
                         }
                     }
 
-                    if (refreshRequired) {game.ui.render();}
+                    if (refreshRequired) { game.ui.render(); }
                 }
             }
 
@@ -2235,7 +2252,7 @@ var run = function() {
                 var fixed = 0;
                 var btn = this.timeManager.manager.tab.vsPanel.children[0].children[0]; //check?
                 // buyItem will check resources
-                while (btn.controller.buyItem(btn.model, {}, function(callback) {return callback;})) {
+                while (btn.controller.buyItem(btn.model, {}, function (callback) { return callback; })) {
                     fixed += 1;
                 }
                 if (fixed > 0) {
@@ -2243,7 +2260,7 @@ var run = function() {
                     storeForSummary('fix.cry', fixed);
                 }
             }
-            
+
             // auto turn on steamworks
             if (optionVals._steamworks.enabled) {
                 var st = game.bld.get('steamworks');
@@ -2257,23 +2274,23 @@ var run = function() {
         getBestUnicornBuilding: function () {
             var unicornPasture = 'unicornPasture';
             var pastureButton = buildManager.getBuildButton('unicornPasture');
-            if(typeof pastureButton === 'undefined')
+            if (typeof pastureButton === 'undefined')
                 return;
-            var validBuildings = ['unicornTomb','ivoryTower','ivoryCitadel','skyPalace','unicornUtopia','sunspire'];
+            var validBuildings = ['unicornTomb', 'ivoryTower', 'ivoryCitadel', 'skyPalace', 'unicornUtopia', 'sunspire'];
             var unicornsPerSecond = game.getEffect('unicornsPerTickBase') * game.getTicksPerSecondUI();
             var globalRatio = game.getEffect('unicornsGlobalRatio') + 1;
             var religionRatio = game.getEffect('unicornsRatioReligion') + 1;
             var paragonRatio = game.prestige.getParagonProductionRatio() + 1;
             var faithBonus = game.religion.getSolarRevolutionRatio() + 1;
             var cycle = 1;
-            if(game.calendar.cycles[game.calendar.cycle].festivalEffects['unicorns'] != undefined)
-                if(game.prestige.getPerk('numeromancy').researched && game.calendar.festivalDays)
+            if (game.calendar.cycles[game.calendar.cycle].festivalEffects['unicorns'] != undefined)
+                if (game.prestige.getPerk('numeromancy').researched && game.calendar.festivalDays)
                     cycle = game.calendar.cycles[game.calendar.cycle].festivalEffects['unicorns'];
             var onZig = Math.max(game.bld.getBuildingExt('ziggurat').meta.on, 1);
             var total = unicornsPerSecond * globalRatio * religionRatio * paragonRatio * faithBonus * cycle;
             var baseUnicornsPerRift = 500 * (1 + game.getEffect('unicornsRatioReligion') * 0.1);
             var riftChanceRatio = 1;
-            if(game.prestige.getPerk('unicornmancy').researched)
+            if (game.prestige.getPerk('unicornmancy').researched)
                 riftChanceRatio *= 1.1;
             var baseRift = game.getEffect('riftChance') * riftChanceRatio / (10000 * 2) * baseUnicornsPerRift;
             var bestAmoritization = Infinity;
@@ -2281,39 +2298,39 @@ var run = function() {
             var pastureAmor = game.bld.getBuildingExt('unicornPasture').meta.effects['unicornsPerTickBase'] * game.getTicksPerSecondUI();
             pastureAmor = pastureAmor * globalRatio * religionRatio * paragonRatio * faithBonus * cycle;
             pastureAmor = pastureButton.model.prices[0].val / pastureAmor;
-            if(pastureAmor < bestAmoritization){
+            if (pastureAmor < bestAmoritization) {
                 bestAmoritization = pastureAmor;
                 bestBuilding = unicornPasture;
             }
-            for(var i in this.religionManager.manager.tab.zgUpgradeButtons){
+            for (var i in this.religionManager.manager.tab.zgUpgradeButtons) {
                 var btn = this.religionManager.manager.tab.zgUpgradeButtons[i];
-                if(validBuildings.indexOf(btn.id)!=-1){
-                    if(btn.model.visible){
+                if (validBuildings.indexOf(btn.id) != -1) {
+                    if (btn.model.visible) {
                         unicornPrice = 0;
-                        for(var j in btn.model.prices){
-                            if(btn.model.prices[j].name=='unicorns')
+                        for (var j in btn.model.prices) {
+                            if (btn.model.prices[j].name == 'unicorns')
                                 unicornPrice += btn.model.prices[j].val;
-                            if(btn.model.prices[j].name=='tears')
+                            if (btn.model.prices[j].name == 'tears')
                                 unicornPrice += btn.model.prices[j].val * 2500 / onZig;
                         }
                         var bld = game.religion.getZU(btn.id);
                         var relBonus = religionRatio;
                         var riftChance = game.getEffect('riftChance');
-                        for(var j in bld.effects){
-                            if(j == 'unicornsRatioReligion')
+                        for (var j in bld.effects) {
+                            if (j == 'unicornsRatioReligion')
                                 relBonus += bld.effects[j]
-                            if(j == 'riftChance')
+                            if (j == 'riftChance')
                                 riftChance += bld.effects[j];
                         }
-                        var unicornsPerRift = 500 * ((relBonus -1) * 0.1 +1);
+                        var unicornsPerRift = 500 * ((relBonus - 1) * 0.1 + 1);
                         var riftBonus = riftChance * riftChanceRatio / (10000 * 2) * unicornsPerRift;
                         riftBonus -= baseRift;
                         var amor = unicornsPerSecond * globalRatio * relBonus * paragonRatio * faithBonus * cycle;
                         amor -= total;
                         amor = amor + riftBonus;
                         amor = unicornPrice / amor;
-                        if(amor < bestAmoritization)
-                            if(riftBonus > 0 || relBonus > religionRatio && unicornPrice > 0){
+                        if (amor < bestAmoritization)
+                            if (riftBonus > 0 || relBonus > religionRatio && unicornPrice > 0) {
                                 bestAmoritization = amor;
                                 bestBuilding = btn.id;
                             }
@@ -2371,8 +2388,8 @@ var run = function() {
 
             var amountTemp = amount;
             var label = build.label;
-            amount=this.bulkManager.construct(button.model, button, amount);
-            if (amount !== amountTemp) {warning(label + ' Amount ordered: '+amountTemp+' Amount Constructed: '+amount);}
+            amount = this.bulkManager.construct(button.model, button, amount);
+            if (amount !== amountTemp) { warning(label + ' Amount ordered: ' + amountTemp + ' Amount Constructed: ' + amount); }
 
             if (variant === "s") {
                 storeForSummary(label, amount, 'faith');
@@ -2442,8 +2459,8 @@ var run = function() {
 
             var amountTemp = amount;
             var label = build.label;
-            amount=this.bulkManager.construct(button.model, button, amount);
-            if (amount !== amountTemp) {warning(label + ' Amount ordered: '+amountTemp+' Amount Constructed: '+amount);}
+            amount = this.bulkManager.construct(button.model, button, amount);
+            if (amount !== amountTemp) { warning(label + ' Amount ordered: ' + amountTemp + ' Amount Constructed: ' + amount); }
             storeForSummary(label, amount, 'build');
 
 
@@ -2545,8 +2562,8 @@ var run = function() {
             if (!button || !button.model.enabled) return;
             var amountTemp = amount;
             var label = build.meta.label ? build.meta.label : build.meta.stages[stage].label;
-            amount=this.bulkManager.construct(button.model, button, amount);
-            if (amount !== amountTemp) {warning(label + ' Amount ordered: '+amountTemp+' Amount Constructed: '+amount);}
+            amount = this.bulkManager.construct(button.model, button, amount);
+            if (amount !== amountTemp) { warning(label + ' Amount ordered: ' + amountTemp + ' Amount Constructed: ' + amount); }
             storeForSummary(label, amount, 'build');
 
             if (amount === 1) {
@@ -2565,7 +2582,7 @@ var run = function() {
 
             for (var i in buttons) {
                 var haystack = buttons[i].model.name;
-                if (haystack.indexOf(label) !== -1){
+                if (haystack.indexOf(label) !== -1) {
                     return buttons[i];
                 }
             }
@@ -2592,9 +2609,9 @@ var run = function() {
             if (!build.unlocked || !button || !button.model.enabled || !options.auto.space.items[name].enabled) return;
             var amountTemp = amount;
             var label = build.label;
-            amount=this.bulkManager.construct(button.model, button, amount);
+            amount = this.bulkManager.construct(button.model, button, amount);
             if (amount !== amountTemp) {
-                warning(label + ' Amount ordered: '+amountTemp+' Amount Constructed: '+amount);
+                warning(label + ' Amount ordered: ' + amountTemp + ' Amount Constructed: ' + amount);
             }
             storeForSummary(label, amount, 'build');
 
@@ -2672,7 +2689,7 @@ var run = function() {
         singleCraftPossible: function (name) {
             var materials = this.getMaterials(name);
             for (var mat in materials) {
-                if (this.getValueAvailable(mat, true) < materials[mat]) {return false;}
+                if (this.getValueAvailable(mat, true) < materials[mat]) { return false; }
             }
             return true;
         },
@@ -2689,17 +2706,17 @@ var run = function() {
             // Safeguard if materials for craft cannot be determined.
             if (!materials) return 0;
 
-            if (name==='steel' && limited) {
-                var plateRatio=game.getResCraftRatio("plate");
-                if (this.getValueAvailable('plate')/this.getValueAvailable('steel') < ((plateRatio+1)/125)/((ratio+1)/100)) {
+            if (name === 'steel' && limited) {
+                var plateRatio = game.getResCraftRatio("plate");
+                if (this.getValueAvailable('plate') / this.getValueAvailable('steel') < ((plateRatio + 1) / 125) / ((ratio + 1) / 100)) {
                     return 0;
                 }
-            } else if (name==='plate' && limited) {
-                var steelRatio=game.getResCraftRatio("steel");
+            } else if (name === 'plate' && limited) {
+                var steelRatio = game.getResCraftRatio("steel");
                 if (game.getResourcePerTick('coal', true) > 0) {
-                    if (this.getValueAvailable('plate')/this.getValueAvailable('steel') > ((ratio+1)/125)/((steelRatio+1)/100)) {
-                        var ironInTime = ((this.getResource('coal').maxValue*trigger - this.getValue('coal'))/game.getResourcePerTick('coal', true))*Math.max(game.getResourcePerTick('iron', true), 0);
-                        plateMax = (this.getValueAvailable('iron') - Math.max(this.getResource('coal').maxValue*trigger - ironInTime,0))/125;
+                    if (this.getValueAvailable('plate') / this.getValueAvailable('steel') > ((ratio + 1) / 125) / ((steelRatio + 1) / 100)) {
+                        var ironInTime = ((this.getResource('coal').maxValue * trigger - this.getValue('coal')) / game.getResourcePerTick('coal', true)) * Math.max(game.getResourcePerTick('iron', true), 0);
+                        plateMax = (this.getValueAvailable('iron') - Math.max(this.getResource('coal').maxValue * trigger - ironInTime, 0)) / 125;
                     }
                 }
             }
@@ -2708,7 +2725,7 @@ var run = function() {
 
             for (var i in materials) {
                 var delta = undefined;
-                if (! limited || (this.getResource(i).maxValue > 0 && aboveTrigger) || (name === 'ship' && optionVal && (this.getResource('ship').value < 243)) ) {
+                if (!limited || (this.getResource(i).maxValue > 0 && aboveTrigger) || (name === 'ship' && optionVal && (this.getResource('ship').value < 243))) {
                     // If there is a storage limit, we can just use everything returned by getValueAvailable, since the regulation happens there
                     delta = this.getValueAvailable(i) / materials[i];
                 } else {
@@ -2719,7 +2736,7 @@ var run = function() {
                     delta = limRat * ((this.getValueAvailable(i, true) + (materials[i] / (1 + ratio)) * this.getValueAvailable(res.name, true)) / materials[i]) - (this.getValueAvailable(res.name, true) / (1 + ratio));
                 }
 
-                amount = Math.min(delta,amount,plateMax);
+                amount = Math.min(delta, amount, plateMax);
             }
 
             // If we have a maximum value, ensure that we don't produce more than
@@ -2750,22 +2767,23 @@ var run = function() {
         },
         getTickVal: function (res, preTrade) {
             var prod = game.getResourcePerTick(res.name, true);
+
             if (res.craftable) {
-                var minProd=Number.MAX_VALUE;
+                var minProd = Number.MAX_VALUE;
                 var materials = this.getMaterials(res.name);
                 for (var mat in materials) {
-                    var rat = (1+game.getResCraftRatio(res.name))/materials[mat];
+                    var rat = (1 + game.getResCraftRatio(res.name)) / materials[mat];
                     //Currently preTrade is only true for the festival stuff, so including furs from hunting is ideal.
                     var addProd = this.getTickVal(this.getResource(mat));
                     minProd = Math.min(addProd * rat, minProd);
                 }
-                prod += (minProd!==Number.MAX_VALUE) ? minProd : 0;
+                prod += (minProd !== Number.MAX_VALUE) ? minProd : 0;
             }
-            if (prod <= 0 && (res.name === 'spice' || res.name === 'blueprint')) {return 'ignore';}
-            if (!preTrade) {prod += this.cacheManager.getResValue(res.name)};
+            if (prod <= 0 && (res.name === 'spice' || res.name === 'blueprint')) { return 'ignore'; }
+            if (!preTrade) { prod += this.cacheManager.getResValue(res.name) };
             return prod;
         },
-        getAverageHunt: function() {
+        getAverageHunt: function () {
             var output = {};
             var hunterRatio = game.getEffect('hunterRatio') + game.village.getEffectLeader('manager', 0);
 
@@ -2786,7 +2804,7 @@ var run = function() {
             return output;
         },
         getResource: function (name) {
-            if (name === 'slabs') {name = 'slab';} //KG BETA BUGFIX
+            if (name === 'slabs') { name = 'slab'; } //KG BETA BUGFIX
             // for (var i in game.resPool.resources) {
             //     var res = game.resPool.resources[i];
             //     if (res.name === name) return res;
@@ -2813,12 +2831,12 @@ var run = function() {
                 var trigger = options.auto.craft.trigger;
             }
             else {
-              var trigger = typeTrigger;
+                var trigger = typeTrigger;
             }
 
             if ('catnip' === name) {
-                var pastures = (game.bld.getBuildingExt('pasture').meta.stage === 0) ? game.bld.getBuildingExt('pasture').meta.val: 0;
-                var aqueducts = (game.bld.getBuildingExt('aqueduct').meta.stage === 0) ? game.bld.getBuildingExt('aqueduct').meta.val: 0;
+                var pastures = (game.bld.getBuildingExt('pasture').meta.stage === 0) ? game.bld.getBuildingExt('pasture').meta.val : 0;
+                var aqueducts = (game.bld.getBuildingExt('aqueduct').meta.stage === 0) ? game.bld.getBuildingExt('aqueduct').meta.val : 0;
                 var resPerTick = this.getPotentialCatnip(true, pastures, aqueducts)
 
                 if (resPerTick < 0) stock -= resPerTick * 202 * 5;
@@ -2835,7 +2853,7 @@ var run = function() {
                 value -= Math.min(this.getResource(name).maxValue * trigger, value) * (1 - consume);
 
                 if ('unobtainium' === name) {
-                    if (value < 1000 && this.getResource(name).value == this.getResource(name).maxValue && this.getResource(name).value>= 1000) {
+                    if (value < 1000 && this.getResource(name).value == this.getResource(name).maxValue && this.getResource(name).value >= 1000) {
                         value = this.getResource(name).value;// fix unobtainium carfting to eludium
                     }
                 }
@@ -2847,13 +2865,13 @@ var run = function() {
             var fieldProd = game.getEffect('catnipPerTickBase');
             if (worstWeather) {
                 fieldProd *= 0.1;
-                fieldProd *= 1 + game.getLimitedDR(game.getEffect("coldHarshness"),1);
+                fieldProd *= 1 + game.getLimitedDR(game.getEffect("coldHarshness"), 1);
 
-                if (game.science.getPolicy("communism").researched) {fieldProd = 0;}
+                if (game.science.getPolicy("communism").researched) { fieldProd = 0; }
 
-                } else {
-                    fieldProd *= game.calendar.getWeatherMod({name: "catnip"});
-                }
+            } else {
+                fieldProd *= game.calendar.getWeatherMod({ name: "catnip" });
+            }
             var vilProd = (game.village.getResProduction().catnip) ? game.village.getResProduction().catnip * (1 + game.getEffect('catnipJobRatio')) : 0;
             var baseProd = fieldProd + vilProd;
             var hydroponics = game.space.getBuilding('hydroponics');
@@ -2864,12 +2882,12 @@ var run = function() {
             baseProd *= 1 + paragonBonus;
 
             baseProd *= 1 + game.religion.getSolarRevolutionRatio() * (1 + game.bld.pollutionEffects["solarRevolutionPollution"]);
-            
+
             //if (!game.opts.disableCMBR) {baseProd *= (1 + game.getCMBRBonus());}
 
             baseProd *= 1 + (game.getEffect('blsProductionBonus') * game.resPool.get('sorrow').value);
 
-            baseProd = game.calendar.cycleEffectsFestival({catnip: baseProd})['catnip'];
+            baseProd = game.calendar.cycleEffectsFestival({ catnip: baseProd })['catnip'];
 
             baseProd *= 1 + game.bld.pollutionEffects["catnipPollutionRatio"];
 
@@ -2909,20 +2927,20 @@ var run = function() {
             for (var name in builds) {
                 var build = builds[name];
                 var data = metaData[name];
-                if (!build.enabled) {continue;}
-                if (data.tHidden === true) {continue;}
-                if (data.rHidden === true) {continue;}
-                if ((data.rHidden === undefined) && !data.unlocked) {continue;}
+                if (!build.enabled) { continue; }
+                if (data.tHidden === true) { continue; }
+                if (data.rHidden === true) { continue; }
+                if ((data.rHidden === undefined) && !data.unlocked) { continue; }
                 if (name === 'cryochambers' && (game.time.getVSU('usedCryochambers').val > 0
-                    || game.bld.getBuildingExt('chronosphere').meta.val <= data.val)) {continue;}
-                if (name === 'ressourceRetrieval' && data.val >= 100) {continue;}
+                    || game.bld.getBuildingExt('chronosphere').meta.val <= data.val)) { continue; }
+                if (name === 'ressourceRetrieval' && data.val >= 100) { continue; }
                 var prices = (data.stages) ? data.stages[data.stage].prices : data.prices;
-                if (build.variant === 's') {prices = game.village.getEffectLeader("wise", dojo.clone(data.prices));}
+                if (build.variant === 's') { prices = game.village.getEffectLeader("wise", dojo.clone(data.prices)); }
                 var priceRatio = this.getPriceRatio(data, source);
-                if (!this.singleBuildPossible(data, prices, priceRatio, source)) {continue;}
+                if (!this.singleBuildPossible(data, prices, priceRatio, source)) { continue; }
                 var require = !build.require ? false : this.craftManager.getResource(build.require);
                 if (!require || trigger <= require.value / require.maxValue) {
-                    if (typeof(build.stage) !== 'undefined' && build.stage !== data.stage) {
+                    if (typeof (build.stage) !== 'undefined' && build.stage !== data.stage) {
                         continue;
                     }
                     bList.push(new Object());
@@ -2942,7 +2960,7 @@ var run = function() {
                     var pricesDiscount = game.getLimitedDR(game.getEffect(name + "CostReduction"), 1);
                     var priceModifier = 1 - pricesDiscount;
                     for (var i in prices) {
-                        var resPriceDiscount = game.getLimitedDR(game.getEffect(prices[i].name+"CostReduction"), 1);
+                        var resPriceDiscount = game.getLimitedDR(game.getEffect(prices[i].name + "CostReduction"), 1);
                         var resPriceModifier = 1 - resPriceDiscount;
                         countList[counter].prices.push({
                             val: prices[i].val * priceModifier * resPriceModifier,
@@ -2958,13 +2976,13 @@ var run = function() {
                 }
             }
 
-            if (countList.length === 0) {return;}
+            if (countList.length === 0) { return; }
 
             var tempPool = new Object();
             for (var res in game.resPool.resources) {
-                tempPool[game.resPool.resources[res].name]=game.resPool.resources[res].value;
+                tempPool[game.resPool.resources[res].name] = game.resPool.resources[res].value;
             }
-            for (var res in tempPool) {tempPool[res] = this.craftManager.getValueAvailable(res, true);}
+            for (var res in tempPool) { tempPool[res] = this.craftManager.getValueAvailable(res, true); }
 
             var k = 0;
             while (countList.length !== 0) {
@@ -2994,8 +3012,8 @@ var run = function() {
                         } else {
                             var nextPriceCheck = (tempPool[prices[p].name] < prices[p].val * Math.pow(priceRatio, k + data.val));
                         }
-                        if (nextPriceCheck || (data.noStackable && (k + data.val)>=1) || (build.id === 'ressourceRetrieval' && k + data.val >= 100)
-                          || (build.id === 'cryochambers' && game.bld.getBuildingExt('chronosphere').meta.val <= k + data.val)) {
+                        if (nextPriceCheck || (data.noStackable && (k + data.val) >= 1) || (build.id === 'ressourceRetrieval' && k + data.val >= 100)
+                            || (build.id === 'cryochambers' && game.bld.getBuildingExt('chronosphere').meta.val <= k + data.val)) {
                             for (var p2 = 0; p2 < p; p2++) {
                                 if (source && source === 'space' && prices[p2].name === 'oil') {
                                     var oilPriceRefund = prices[p2].val * (1 - game.getLimitedDR(game.getEffect('oilReductionRatio'), 0.75));
@@ -3037,17 +3055,17 @@ var run = function() {
             if (typeof meta.limitBuild == "number" && meta.limitBuild - meta.val < amount) {
                 amount = meta.limitBuild - meta.val;
             }
-            if (model.enabled && button.controller.hasResources(model) || game.devMode ) {
+            if (model.enabled && button.controller.hasResources(model) || game.devMode) {
                 while (button.controller.hasResources(model) && amount > 0) {
-                    model.prices=button.controller.getPrices(model);
+                    model.prices = button.controller.getPrices(model);
                     button.controller.payPrice(model);
                     button.controller.incrementValue(model);
                     counter++;
                     amount--;
                 }
-                if (meta.breakIronWill) {game.ironWill = false;}
-                if (meta.unlocks) {game.unlock(meta.unlocks);}
-                if (meta.upgrades) {game.upgrade(meta.upgrades);}
+                if (meta.breakIronWill) { game.ironWill = false; }
+                if (meta.unlocks) { game.unlock(meta.unlocks); }
+                if (meta.upgrades) { game.upgrade(meta.upgrades); }
             }
             return counter;
         },
@@ -3068,17 +3086,17 @@ var run = function() {
             var pricesDiscount = game.getLimitedDR(game.getEffect(data.name + "CostReduction"), 1);
             var priceModifier = 1 - pricesDiscount;
             for (var price in prices) {
-                var resPriceDiscount = game.getLimitedDR(game.getEffect(prices[price].name+"CostReduction"), 1);
+                var resPriceDiscount = game.getLimitedDR(game.getEffect(prices[price].name + "CostReduction"), 1);
                 var resPriceModifier = 1 - resPriceDiscount;
                 var rightPrice = prices[price].val * priceModifier * resPriceModifier;
                 if (source && source === 'space' && prices[price].name === 'oil') {
                     var oilPrice = rightPrice * (1 - game.getLimitedDR(game.getEffect('oilReductionRatio'), 0.75));
-                    if (this.craftManager.getValueAvailable('oil', true) < oilPrice * Math.pow(1.05, data.val)) {return false;}
+                    if (this.craftManager.getValueAvailable('oil', true) < oilPrice * Math.pow(1.05, data.val)) { return false; }
                 } else if (data.name === 'cryochambers' && prices[price].name === 'karma') {
                     var karmaPrice = rightPrice * (1 - game.getLimitedDR(0.01 * game.prestige.getBurnedParagonRatio(), 1.0));
-                    if (this.craftManager.getValueAvailable('karma', true) < karmaPrice * Math.pow(priceRatio, data.val)) {return false;}
+                    if (this.craftManager.getValueAvailable('karma', true) < karmaPrice * Math.pow(priceRatio, data.val)) { return false; }
                 } else {
-                    if (this.craftManager.getValueAvailable(prices[price].name, true) < rightPrice * Math.pow(priceRatio, data.val)) {return false;}
+                    if (this.craftManager.getValueAvailable(prices[price].name, true) < rightPrice * Math.pow(priceRatio, data.val)) { return false; }
                 }
             }
             return true;
@@ -3098,13 +3116,13 @@ var run = function() {
         manager: undefined,
         trade: function (name, amount) {
 
-            if (!name || 1 > amount) {warning('KS trade checks are not functioning properly, please create an issue on the github page.');}
+            if (!name || 1 > amount) { warning('KS trade checks are not functioning properly, please create an issue on the github page.'); }
 
             var race = this.getRace(name);
 
             var button = this.getTradeButton(race.name);
 
-            if (!button.model.enabled || !options.auto.trade.items[name].enabled) {warning('KS trade checks are not functioning properly, please create an issue on the github page.');}
+            if (!button.model.enabled || !options.auto.trade.items[name].enabled) { warning('KS trade checks are not functioning properly, please create an issue on the github page.'); }
 
             game.diplomacy.tradeMultiple(race, amount);
             storeForSummary(race.title, amount, 'trade');
@@ -3117,8 +3135,10 @@ var run = function() {
             var cost = 0;
             for (var mat in materials) {
                 var tick = this.craftManager.getTickVal(this.craftManager.getResource(mat));
-                if (tick <= 0) {return false;}
-                cost += materials[mat]/tick;
+                if (tick <= 0) {
+                    return false;
+                }
+                cost += materials[mat] / tick;
             }
 
             var output = this.getAverageTrade(race);
@@ -3126,9 +3146,27 @@ var run = function() {
             for (var prod in output) {
                 var res = this.craftManager.getResource(prod);
                 var tick = this.craftManager.getTickVal(res);
-                if (tick === 'ignore') {continue;}
-                if (tick <= 0) {return true;}
-                profit += (res.maxValue > 0) ? Math.min(output[prod], Math.max(res.maxValue - res.value, 0))/tick : output[prod]/tick;
+                if (tick === 'ignore') { continue; }
+                if (tick <= 0) { return true; }
+                if ((output[prod] + res.value) > res.maxValue) {
+                    profit += (res.maxValue > 0) ? Math.min(output[prod], Math.max(res.maxValue - res.value, 0)) / tick : output[prod] / tick;
+                }
+
+                if (prod === "titanium") {
+                    if (cost > profit && gamePage.religion.getRU("solarRevolution").on) {
+                        var titanium = gamePage.resPool.get('titanium');
+                        if ((titanium.value / titanium.maxValue) < 0.4) {
+                            console.log("Titanium res < 40% cap hence force trade");
+                            console.log("profit=", profit, " cost=", cost);
+                            return true;
+                        }
+                    } else if (cost > profit) {
+                        console.log("waiting solar revolution complete:", gamePage.religion.getRU("solarRevolution").on);
+                    } else {
+                        console.log("Expect titanium trade");
+                    }
+                    console.log("profit=", profit, " cost=", cost);
+                }
             }
             return (cost <= profit);
         },
@@ -3141,15 +3179,15 @@ var run = function() {
             var rRatio = 1 + race.energy * 0.02;
             // tradeRatio
             // var tRatio = 1 + game.diplomacy.getTradeRatio();
-		    var tRatio = 1 + game.diplomacy.getTradeRatio() + game.diplomacy.calculateTradeBonusFromPolicies(race.name, game) + game.challenges.getChallenge("pacifism").getTradeBonusEffect(game);
+            var tRatio = 1 + game.diplomacy.getTradeRatio() + game.diplomacy.calculateTradeBonusFromPolicies(race.name, game) + game.challenges.getChallenge("pacifism").getTradeBonusEffect(game);
             // var successRat = (race.attitude === "hostile") ? Math.min(race.standing + standRat/100, 1) : 1;
             // var bonusRat = (race.attitude === "friendly") ? Math.min(race.standing + standRat/200, 1) : 0;
             // ref: var failedTradeAmount = race.standing < 0 ? this.game.math.binominalRandomInteger(totalTradeAmount, -(race.standing + standingRatio)) : 0;
-		    // ref: var successfullTradeAmount = totalTradeAmount - failedTradeAmount;
+            // ref: var successfullTradeAmount = totalTradeAmount - failedTradeAmount;
             var failedRat = (race.standing < 0) ? (race.standing + standRat) : 0;
             var successRat = (failedRat < 0) ? (1 + failedRat) : 1;
             var bonusRat = (race.standing > 0) ? Math.min(race.standing + standRat / 2, 1) : 0;
-            
+
             var output = {};
             for (var s in race.sells) {
                 var item = race.sells[s];
@@ -3200,7 +3238,7 @@ var run = function() {
 
             amount = Math.floor(amount);
 
-            if (amount === 0) {return 0;}
+            if (amount === 0) { return 0; }
 
             if (race === null || options.auto.trade.items[name].allowcapped) return amount;
 
@@ -3230,7 +3268,7 @@ var run = function() {
             // we seem to starve trading altogether.
             highestCapacity = Math.ceil(highestCapacity);
 
-            if (highestCapacity === 0) {return 0;}
+            if (highestCapacity === 0) { return 0; }
 
             // Now that we know the most we *should* trade for, check to ensure that
             // we trade for our max cost, or our max capacity, whichever is lower.
@@ -3277,7 +3315,7 @@ var run = function() {
         singleTradePossible: function (name) {
             var materials = this.getMaterials(name);
             for (var mat in materials) {
-                if (this.craftManager.getValueAvailable(mat, true) < materials[mat]) {return false;}
+                if (this.craftManager.getValueAvailable(mat, true) < materials[mat]) { return false; }
             }
             return true;
         }
@@ -3286,7 +3324,7 @@ var run = function() {
     // Cache Manager
     // ===============
 
-    var CacheManager = function () {};
+    var CacheManager = function () { };
 
     CacheManager.prototype = {
         pushToCache: function (data) {
@@ -3297,7 +3335,7 @@ var run = function() {
 
             cache.push(data);
             for (var mat in materials) {
-                if (!cacheSum[mat]) {cacheSum[mat] = 0;}
+                if (!cacheSum[mat]) { cacheSum[mat] = 0; }
                 cacheSum[mat] += materials[mat];
             }
 
@@ -3306,7 +3344,7 @@ var run = function() {
                 if (cache.length > 10000) {
                     var oldMaterials = oldData['materials'];
                     for (var mat in oldMaterials) {
-                        if (!cacheSum[mat]) {cacheSum[mat] = 0;}
+                        if (!cacheSum[mat]) { cacheSum[mat] = 0; }
                         cacheSum[mat] -= oldMaterials[mat];
                     }
                     cache.shift();
@@ -3318,9 +3356,9 @@ var run = function() {
         },
         getResValue: function (res) {
             var cache = options.auto.cache.cache;
-            if (cache.length === 0) {return 0;}
+            if (cache.length === 0) { return 0; }
             var cacheSum = options.auto.cache.cacheSum;
-            if (!cacheSum[res]) {return 0;}
+            if (!cacheSum[res]) { return 0; }
             var currentTick = game.timer.ticksTotal;
             var startingTick = cache[0].timeStamp;
 
@@ -3345,7 +3383,7 @@ var run = function() {
         + 'font-family: monospace;'
         + 'font-size: 12px;'
         + '}');
-        
+
     addRule(defaultSelector + ' #game {'
         // + 'font-family: monospace;'
         // + 'font-size: 12px;'
@@ -3443,7 +3481,7 @@ var run = function() {
         + '#ks-options #toggle-reset-list-resources .stockWarn * {'
         + 'color: ' + options.stockwarncolor + ';'
         + '}');
-    
+
     addRule('.right-tab {'
         + 'height: unset !important;'
         + '}');
@@ -3556,9 +3594,9 @@ var run = function() {
 
                 if (name[0] == 'set') {
                     el[0].title = value;
-                    if (name[name.length -1] == 'max') {
+                    if (name[name.length - 1] == 'max') {
                         el.text(i18n('ui.max', [value]));
-                    } else if (name[name.length -1] == 'min') {
+                    } else if (name[name.length - 1] == 'min') {
                         el.text(i18n('ui.min', [value]));
                     }
                 } else {
@@ -3608,7 +3646,7 @@ var run = function() {
                     if ('stockForReset' in res) setStockValue(resource, res.stockForReset ? res.stockForReset : Infinity, true);
                 }
             }
-            
+
             if (saved.triggers) {
                 options.auto.faith.trigger = saved.triggers.faith;
                 options.auto.time.trigger = saved.triggers.time;
@@ -3639,17 +3677,17 @@ var run = function() {
         return +(Math.round(n + "e+2") + "e-2")
     };
 
-    var setStockWarning = function(name, value, forReset=false) {
+    var setStockWarning = function (name, value, forReset = false) {
         // simplest way to ensure it doesn't stick around too often; always do
         // a remove first then re-add only if needed
-        var path = forReset ? '#resource-reset-'+name : '#resource-'+name;
+        var path = forReset ? '#resource-reset-' + name : '#resource-' + name;
         $(path).removeClass("stockWarn");
 
         var maxValue = game.resPool.resources.filter(i => i.name == name)[0].maxValue;
         if ((value > maxValue && !(maxValue === 0)) || value === Infinity) $(path).addClass("stockWarn");
     }
 
-    var setStockValue = function (name, value, forReset=false) {
+    var setStockValue = function (name, value, forReset = false) {
         var n = Number(value);
 
         if (isNaN(n) || n < 0) {
@@ -3660,7 +3698,7 @@ var run = function() {
         if (!options.auto.resources[name]) options.auto.resources[name] = {};
         if (forReset) {
             var path = '#resource-reset-' + name + ' #stock-value-' + name;
-            n = n<0 ? Infinity : n;
+            n = n < 0 ? Infinity : n;
             options.auto.resources[name].checkForReset = true;
             options.auto.resources[name].stockForReset = n;
         } else {
@@ -3686,7 +3724,7 @@ var run = function() {
         $('#consume-rate-' + name).text(i18n('resources.consume', [n.toFixed(2)]));
     };
 
-    var removeResourceControl = function (name, forReset=false) {
+    var removeResourceControl = function (name, forReset = false) {
         var opt = options.auto.resources[name];
         if (forReset)
             opt.checkForReset = false;
@@ -3697,7 +3735,7 @@ var run = function() {
             delete options.auto.resources[name];
     };
 
-    var addNewResourceOption = function (name, title, forReset=false) {
+    var addNewResourceOption = function (name, title, forReset = false) {
         title = title || game.resPool.get(name).title || ucfirst(name);
         var res = options.auto.resources[name];
         if (forReset && res && res.stockForReset)
@@ -3710,35 +3748,37 @@ var run = function() {
 
         var container = $('<div/>', {
             id: (forReset ? 'resource-reset-' : 'resource-') + name,
-            css: {display: 'inline-block', width: '100%'},
+            css: { display: 'inline-block', width: '100%' },
         });
 
         var label = $('<div/>', {
             id: 'resource-label-' + name,
             text: title,
-            css: {display: 'inline-block', width: '95px'},
+            css: { display: 'inline-block', width: '95px' },
         });
 
         var stock = $('<div/>', {
             id: 'stock-value-' + name,
             text: i18n('resources.stock', [stock === Infinity ? '∞' : game.getDisplayValueExt(stock)]),
-            css: {cursor: 'pointer', display: 'inline-block', width: '80px'},
+            css: { cursor: 'pointer', display: 'inline-block', width: '80px' },
         });
 
         var consume = $('<div/>', {
             id: 'consume-rate-' + name,
             text: i18n('resources.consume', [consume.toFixed(2)]),
-            css: {cursor: 'pointer', display: 'inline-block'},
+            css: { cursor: 'pointer', display: 'inline-block' },
         });
 
         var del = $('<div/>', {
             id: 'resource-delete-' + name,
             text: i18n('resources.del'),
-            css: {cursor: 'pointer',
+            css: {
+                cursor: 'pointer',
                 display: 'inline-block',
                 float: 'right',
                 paddingRight: '5px',
-                textShadow: '3px 3px 4px gray'},
+                textShadow: '3px 3px 4px gray'
+            },
         });
 
         if (forReset)
@@ -3793,8 +3833,10 @@ var run = function() {
                 var item = $('<div/>', {
                     id: 'resource-add-' + res.name,
                     text: ucfirst(res.title ? res.title : res.name),
-                    css: {cursor: 'pointer',
-                        textShadow: '3px 3px 4px gray'},
+                    css: {
+                        cursor: 'pointer',
+                        textShadow: '3px 3px 4px gray'
+                    },
                 });
 
                 // Wrapper function needed to make closure work
@@ -3824,29 +3866,33 @@ var run = function() {
         return items;
     };
 
-    var getResourceOptions = function (forReset=false) {
+    var getResourceOptions = function (forReset = false) {
         var list = $('<ul/>', {
             id: forReset ? 'toggle-reset-list-resources' : 'toggle-list-resources',
-            css: {display: 'none', paddingLeft: '20px'}
+            css: { display: 'none', paddingLeft: '20px' }
         });
 
         var add = $('<div/>', {
             id: 'resources-add',
             text: i18n('resources.add'),
-            css: {cursor: 'pointer',
+            css: {
+                cursor: 'pointer',
                 display: 'inline-block',
                 textShadow: '3px 3px 4px gray',
-                borderBottom: '1px solid rgba(185, 185, 185, 0.7)' },
+                borderBottom: '1px solid rgba(185, 185, 185, 0.7)'
+            },
         });
 
         var clearunused = $('<div/>', {
             id: 'resources-clear-unused',
             text: i18n('resources.clear.unused'),
-            css: {cursor: 'pointer',
+            css: {
+                cursor: 'pointer',
                 display: 'inline-block',
                 float: 'right',
                 paddingRight: '5px',
-                textShadow: '3px 3px 4px gray' },
+                textShadow: '3px 3px 4px gray'
+            },
         });
 
         clearunused.on('click', function () {
@@ -3863,7 +3909,7 @@ var run = function() {
 
         var allresources = $('<ul/>', {
             id: 'available-resources-list',
-            css: {display: 'none', paddingLeft: '20px'}
+            css: { display: 'none', paddingLeft: '20px' }
         });
 
         (function (add, forReset) {
@@ -3892,16 +3938,18 @@ var run = function() {
     var getOptionHead = function (toggleName) {
         var list = $('<ul/>', {
             id: 'items-list-' + toggleName,
-            css: {display: 'none', paddingLeft: '20px'}
+            css: { display: 'none', paddingLeft: '20px' }
         });
 
         var disableall = $('<div/>', {
             id: 'toggle-all-items-' + toggleName,
             text: i18n('ui.disable.all'),
-            css: {cursor: 'pointer',
+            css: {
+                cursor: 'pointer',
                 display: 'inline-block',
                 textShadow: '3px 3px 4px gray',
-                marginRight: '8px'}
+                marginRight: '8px'
+            }
         });
 
         disableall.on('click', function () {
@@ -3917,9 +3965,11 @@ var run = function() {
         var enableall = $('<div/>', {
             id: 'toggle-all-items-' + toggleName,
             text: i18n('ui.enable.all'),
-            css: {cursor: 'pointer',
+            css: {
+                cursor: 'pointer',
                 display: 'inline-block',
-                textShadow: '3px 3px 4px gray'}
+                textShadow: '3px 3px 4px gray'
+            }
         });
 
         enableall.on('click', function () {
@@ -3976,19 +4026,21 @@ var run = function() {
                     id: 'set-' + itemName + '-subTrigger',
                     text: i18n('ui.trigger'),
                     title: addi[itemName].subTrigger,
-                    css: {cursor: 'pointer',
+                    css: {
+                        cursor: 'pointer',
                         display: 'inline-block',
                         float: 'right',
                         paddingRight: '5px',
-                        textShadow: '3px 3px 4px gray'}
+                        textShadow: '3px 3px 4px gray'
+                    }
                 }).data('option', addi[itemName]);
-            
+
                 (function (itemName, triggerButton) {
                     if (itemName == 'adore') {
                         triggerButton.on('click', function () {
                             var value;
                             value = window.prompt(i18n('adore.trigger.set'), addi[itemName].subTrigger);
-            
+
                             if (value !== null) {
                                 addi[itemName].subTrigger = parseFloat(value);
                                 kittenStorage.items[triggerButton[0].id] = addi[itemName].subTrigger;
@@ -3996,12 +4048,12 @@ var run = function() {
                                 triggerButton[0].title = addi[itemName].subTrigger;
                             }
                         })
-        
+
                     } else if (itemName == 'autoPraise') {
                         triggerButton.on('click', function () {
                             var value;
                             value = window.prompt(i18n('ui.trigger.set', [i18n('option.praise')]), addi[itemName].subTrigger);
-            
+
                             if (value !== null) {
                                 addi[itemName].subTrigger = parseFloat(value);
                                 kittenStorage.items[triggerButton[0].id] = addi[itemName].subTrigger;
@@ -4016,7 +4068,7 @@ var run = function() {
 
             list.append(node);
         }
-        
+
         return list;
     }
 
@@ -4024,7 +4076,7 @@ var run = function() {
         var itext = ucfirst(i18n('ui.' + toggleName));
 
         var auto = options.auto[toggleName];
-        var element = $('<li/>', {id: 'ks-' + toggleName});
+        var element = $('<li/>', { id: 'ks-' + toggleName });
 
         var label = $('<label/>', {
             'for': 'toggle-' + toggleName,
@@ -4070,17 +4122,19 @@ var run = function() {
             element.css('borderBottom', '1px  solid rgba(185, 185, 185, 0.7)');
 
             var toggle = $('<div/>', {
-                css: {display: 'inline-block', float: 'right'}
+                css: { display: 'inline-block', float: 'right' }
             });
 
             var button = $('<div/>', {
                 id: 'toggle-items-' + toggleName,
                 text: i18n('ui.items'),
-                css: {cursor: 'pointer',
+                css: {
+                    cursor: 'pointer',
                     display: 'inline-block',
                     float: 'right',
                     paddingRight: '5px',
-                    textShadow: '3px 3px 4px gray'}
+                    textShadow: '3px 3px 4px gray'
+                }
             });
 
             element.append(button);
@@ -4133,11 +4187,13 @@ var run = function() {
                 var resources = $('<div/>', {
                     id: 'toggle-resource-controls',
                     text: i18n('ui.craft.resources'),
-                    css: {cursor: 'pointer',
+                    css: {
+                        cursor: 'pointer',
                         display: 'inline-block',
                         float: 'right',
                         paddingRight: '5px',
-                        textShadow: '3px 3px 4px gray'},
+                        textShadow: '3px 3px 4px gray'
+                    },
                 });
 
                 var resourcesList = getResourceOptions();
@@ -4160,11 +4216,13 @@ var run = function() {
                 var addition = $('<div/>', {
                     id: 'toggle-addition-controls',
                     text: i18n('ui.faith.addtion'),
-                    css: {cursor: 'pointer',
+                    css: {
+                        cursor: 'pointer',
                         display: 'inline-block',
                         float: 'right',
                         paddingRight: '5px',
-                        textShadow: '3px 3px 4px gray'},
+                        textShadow: '3px 3px 4px gray'
+                    },
                 });
 
                 var additionList = getAdditionOptions();
@@ -4183,7 +4241,7 @@ var run = function() {
                 // disable auto best unicorn building when unicorn building was disable
                 for (var unicornName in options.auto.unicorn.items) {
                     var ub = list.children().children('#toggle-' + unicornName);
-                    ub.on('change', function() {
+                    ub.on('change', function () {
                         if (!$(event.target).is(':checked')) {
                             var b = $('#toggle-bestUnicornBuilding');
                             b.prop('checked', false);
@@ -4200,11 +4258,13 @@ var run = function() {
                 id: 'trigger-' + toggleName,
                 text: i18n('ui.trigger'),
                 title: auto.trigger,
-                css: {cursor: 'pointer',
+                css: {
+                    cursor: 'pointer',
                     display: 'inline-block',
                     float: 'right',
                     paddingRight: '5px',
-                    textShadow: '3px 3px 4px gray'}
+                    textShadow: '3px 3px 4px gray'
+                }
             });
 
             triggerButton.on('click', function () {
@@ -4221,10 +4281,10 @@ var run = function() {
             element.append(triggerButton);
         }
 
-        if (toggleName === 'craft') {element.append(resourcesList);}
-        else if (toggleName === 'faith') {element.append(additionList);}
+        if (toggleName === 'craft') { element.append(resourcesList); }
+        else if (toggleName === 'faith') { element.append(additionList); }
 
-        if (auto.items) {element.append(toggle, list);}
+        if (auto.items) { element.append(toggle, list); }
 
         return element;
     };
@@ -4268,16 +4328,18 @@ var run = function() {
         var button = $('<div/>', {
             id: 'toggle-seasons-' + name,
             text: i18n('trade.seasons'),
-            css: {cursor: 'pointer',
+            css: {
+                cursor: 'pointer',
                 display: 'inline-block',
                 float: 'right',
                 paddingRight: '5px',
-                textShadow: '3px 3px 4px gray'},
+                textShadow: '3px 3px 4px gray'
+            },
         });
 
         var list = $('<ul/>', {
             id: 'seasons-list-' + name,
-            css: {display: 'none', paddingLeft: '20px'}
+            css: { display: 'none', paddingLeft: '20px' }
         });
 
         // fill out the list with seasons
@@ -4375,7 +4437,7 @@ var run = function() {
         var label = $('<label/>', {
             'for': 'toggle-' + name,
             text: elementLabel,
-            css: {display: 'inline-block', minWidth: '80px'}
+            css: { display: 'inline-block', minWidth: '80px' }
         });
 
         var input = $('<input/>', {
@@ -4415,7 +4477,7 @@ var run = function() {
 
         return element;
     };
-    
+
     var getPoliciesOptions = function (forReset) {
         var items = [];
 
@@ -4426,8 +4488,10 @@ var run = function() {
             items.push($('<div/>', {
                 id: 'policy-' + policy,
                 text: i18n('$policy.' + policy + '.label'),
-                css: {cursor: 'pointer',
-                    textShadow: '3px 3px 4px gray'}
+                css: {
+                    cursor: 'pointer',
+                    textShadow: '3px 3px 4px gray'
+                }
             }));
         }
         return items;
@@ -4440,35 +4504,37 @@ var run = function() {
         if (name == 'policies') {
             var list = $('<ul/>', {
                 id: 'items-list-policies',
-                css: {display: 'none', paddingLeft: '20px'}
+                css: { display: 'none', paddingLeft: '20px' }
             });
 
             var loadButton = $('<div/>', {
                 id: 'toggle-upgrade-policies-load',
                 text: i18n('ui.upgrade.policies.load'),
                 css: {
-                    cursor:'pointer',
-                    display:'inline-block',
-                    float:'right',
-                    paddingRight:'5px',
-                    textShadow:'3px 3px 4px gray'}
+                    cursor: 'pointer',
+                    display: 'inline-block',
+                    float: 'right',
+                    paddingRight: '5px',
+                    textShadow: '3px 3px 4px gray'
                 }
+            }
             );
 
             var showButton = $('<div/>', {
                 id: 'toggle-upgrade-policies-show',
                 text: i18n('ui.upgrade.policies.show'),
                 css: {
-                    cursor:'pointer',
-                    display:'inline-block',
-                    float:'right',
-                    paddingRight:'5px',
-                    textShadow:'3px 3px 4px gray'}
+                    cursor: 'pointer',
+                    display: 'inline-block',
+                    float: 'right',
+                    paddingRight: '5px',
+                    textShadow: '3px 3px 4px gray'
                 }
+            }
             );
             // resetBuildList.append(getResetOption(item, 'build', options.auto.build.items[item]));
 
-            loadButton.on('click', function(){
+            loadButton.on('click', function () {
                 var plist = [];
                 for (var i in game.science.policies) {
                     var policy = game.science.policies[i];
@@ -4476,7 +4542,7 @@ var run = function() {
                         plist.push(policy.name);
                     }
                 }
-        
+
                 options.policies = plist;
                 saveToKittenStorage();
 
@@ -4484,34 +4550,36 @@ var run = function() {
                 list.append(getPoliciesOptions());
             });
 
-            showButton.on('click', function(){
+            showButton.on('click', function () {
                 list.toggle();
                 list.empty();
                 list.append(getPoliciesOptions());
             });
-            
+
             element.append(showButton, loadButton, list);
-        
+
 
         }
 
         if (option.subTrigger !== undefined && name == 'missions') {
             var triggerButton = $('<div/>', {
-                id: 'set-' + name +'-subTrigger',
+                id: 'set-' + name + '-subTrigger',
                 text: i18n('ui.trigger'),
                 title: option.subTrigger,
-                css: {cursor: 'pointer',
+                css: {
+                    cursor: 'pointer',
                     display: 'inline-block',
                     float: 'right',
                     paddingRight: '5px',
-                    textShadow: '3px 3px 4px gray'}
+                    textShadow: '3px 3px 4px gray'
+                }
             }).data('option', option);
-        
+
             triggerButton.on('click', function () {
                 var value;
-                if (name == 'missions'){value = window.prompt(i18n('ui.trigger.missions.set'), option.subTrigger);}
-                else{value = window.prompt(i18n('ui.trigger.set'), option.subTrigger);}
-        
+                if (name == 'missions') { value = window.prompt(i18n('ui.trigger.missions.set'), option.subTrigger); }
+                else { value = window.prompt(i18n('ui.trigger.set'), option.subTrigger); }
+
                 if (value !== null) {
                     option.subTrigger = parseFloat(value);
                     kittenStorage.items[triggerButton.attr('id')] = option.subTrigger;
@@ -4519,7 +4587,7 @@ var run = function() {
                     triggerButton[0].title = option.subTrigger;
                 }
             });
-        
+
             element.append(triggerButton);
         }
 
@@ -4528,7 +4596,7 @@ var run = function() {
                 'for': 'toggle-limited-' + name,
                 text: i18n('ui.limit')
             });
-            
+
             var LimitedInput = $('<input/>', {
                 id: 'toggle-limited-' + name,
                 type: 'checkbox'
@@ -4537,7 +4605,7 @@ var run = function() {
             if (option.limited) {
                 LimitedInput.prop('checked', true);
             }
-            
+
             LimitedInput.on('change', function () {
                 if (LimitedInput.is(':checked') && option.limited == false) {
                     option.limited = true;
@@ -4552,7 +4620,7 @@ var run = function() {
 
             element.append(LimitedInput, LimitedLabel);
         }
-        
+
         return element;
     };
 
@@ -4563,7 +4631,7 @@ var run = function() {
         var label = $('<label/>', {
             'for': 'toggle-' + name,
             text: elementLabel,
-            css: {display: 'inline-block', minWidth: '80px'}
+            css: { display: 'inline-block', minWidth: '80px' }
         });
 
         var input = $('<input/>', {
@@ -4603,11 +4671,13 @@ var run = function() {
             id: 'set-' + name + '-max',
             text: i18n('ui.max', [option.max]),
             title: option.max,
-            css: {cursor: 'pointer',
+            css: {
+                cursor: 'pointer',
                 display: 'inline-block',
                 float: 'right',
                 paddingRight: '5px',
-                textShadow: '3px 3px 4px gray'}
+                textShadow: '3px 3px 4px gray'
+            }
         }).data('option', option);
 
         maxButton.on('click', function () {
@@ -4708,7 +4778,7 @@ var run = function() {
         var label = $('<label/>', {
             'for': 'toggle-reset-' + type + '-' + name,
             text: elementLabel,
-            css: {display: 'inline-block', minWidth: '80px'}
+            css: { display: 'inline-block', minWidth: '80px' }
         });
 
         var input = $('<input/>', {
@@ -4731,16 +4801,18 @@ var run = function() {
             kittenStorage.items[input.attr('id')] = option.checkForReset;
             saveToKittenStorage();
         });
-        
+
         var minButton = $('<div/>', {
-            id: 'set-reset-' + type + '-' + name +'-min',
+            id: 'set-reset-' + type + '-' + name + '-min',
             text: i18n('ui.min', [option.triggerForReset]),
             title: option.triggerForReset,
-            css: {cursor: 'pointer',
+            css: {
+                cursor: 'pointer',
                 display: 'inline-block',
                 float: 'right',
                 paddingRight: '5px',
-                textShadow: '3px 3px 4px gray'}
+                textShadow: '3px 3px 4px gray'
+            }
         }).data('option', option);
 
         minButton.on('click', function () {
@@ -4770,11 +4842,13 @@ var run = function() {
                 id: 'set-timeSkip-subTrigger',
                 text: i18n('ui.trigger'),
                 title: option.subTrigger,
-                css: {cursor: 'pointer',
+                css: {
+                    cursor: 'pointer',
                     display: 'inline-block',
                     float: 'right',
                     paddingRight: '5px',
-                    textShadow: '3px 3px 4px gray'}
+                    textShadow: '3px 3px 4px gray'
+                }
             }).data('option', option);
             triggerButton.on('click', function () {
                 var value;
@@ -4792,11 +4866,13 @@ var run = function() {
                 id: 'set-timeSkip-maximum',
                 text: i18n('ui.maximum'),
                 title: option.max,
-                css: {cursor: 'pointer',
+                css: {
+                    cursor: 'pointer',
                     display: 'inline-block',
                     float: 'right',
                     paddingRight: '5px',
-                    textShadow: '3px 3px 4px gray'}
+                    textShadow: '3px 3px 4px gray'
+                }
             }).data('option', option);
             maximunButton.on('click', function () {
                 var value;
@@ -4813,16 +4889,18 @@ var run = function() {
             var cyclesButton = $('<div/>', {
                 id: 'toggle-cycle-' + name,
                 text: i18n('ui.cycles'),
-                css: {cursor: 'pointer',
+                css: {
+                    cursor: 'pointer',
                     display: 'inline-block',
                     float: 'right',
                     paddingRight: '5px',
-                    textShadow: '3px 3px 4px gray'},
+                    textShadow: '3px 3px 4px gray'
+                },
             });
 
             var cyclesList = $('<ul/>', {
                 id: 'cycles-list-' + name,
-                css: {display: 'none', paddingLeft: '20px'}
+                css: { display: 'none', paddingLeft: '20px' }
             });
 
             for (var i in game.calendar.cycles)
@@ -4832,25 +4910,27 @@ var run = function() {
             var seasonsButton = $('<div/>', {
                 id: 'toggle-seasons-' + name,
                 text: i18n('trade.seasons'),
-                css: {cursor: 'pointer',
+                css: {
+                    cursor: 'pointer',
                     display: 'inline-block',
                     float: 'right',
                     paddingRight: '5px',
-                    textShadow: '3px 3px 4px gray'},
+                    textShadow: '3px 3px 4px gray'
+                },
             });
-    
+
 
             var seasonsList = $('<ul/>', {
                 id: 'seasons-list-' + name,
-                css: {display: 'none', paddingLeft: '20px'}
+                css: { display: 'none', paddingLeft: '20px' }
             });
-    
+
             // fill out the list with seasons
             seasonsList.append(getSeasonForTimeSkip('spring', option));
             seasonsList.append(getSeasonForTimeSkip('summer', option));
             seasonsList.append(getSeasonForTimeSkip('autumn', option));
             seasonsList.append(getSeasonForTimeSkip('winter', option));
-    
+
             cyclesButton.on('click', function () {
                 cyclesList.toggle();
                 seasonsList.toggle(false);
@@ -4859,59 +4939,71 @@ var run = function() {
             seasonsButton.on('click', function () {
                 cyclesList.toggle(false);
                 seasonsList.toggle();
-            });    
+            });
 
             element.append(cyclesButton, seasonsButton, maximunButton, triggerButton, cyclesList, seasonsList);
 
         } else if (name == 'reset') {
 
-            var resetBuildList     = getOptionHead('reset-build')
-            var resetSpaceList     = getOptionHead('reset-space')
+            var resetBuildList = getOptionHead('reset-build')
+            var resetSpaceList = getOptionHead('reset-space')
             var resetResourcesList = getResourceOptions(true);
-            var resetReligionList  = getOptionHead('reset-religion')
-            var resetTimeList      = getOptionHead('reset-time')
-            
-            for (var item in options.auto.build.items)              resetBuildList.append(getResetOption(item, 'build', options.auto.build.items[item]));
-            for (var item in options.auto.space.items)              resetSpaceList.append(getResetOption(item, 'space', options.auto.space.items[item]));
-            for (var item in options.auto.unicorn.items)            resetReligionList.append(getResetOption(item, 'unicorn', options.auto.unicorn.items[item]));
-            for (var item in options.auto.faith.items)              resetReligionList.append(getResetOption(item, 'faith', options.auto.faith.items[item]));
-            for (var item in options.auto.time.items)               resetTimeList.append(getResetOption(item, 'time', options.auto.time.items[item]));
+            var resetReligionList = getOptionHead('reset-religion')
+            var resetTimeList = getOptionHead('reset-time')
 
-            var buildButton = $('<div/>', {id: 'toggle-reset-build', text: i18n('ui.build'),
-                css: {cursor:'pointer',display:'inline-block',float:'right',paddingRight:'5px',textShadow:'3px 3px 4px gray'},});
-            var spaceButton = $('<div/>', {id: 'toggle-reset-space', text: i18n('ui.space'),
-                css: {cursor:'pointer',display:'inline-block',float:'right',paddingRight:'5px',textShadow:'3px 3px 4px gray'},});
-            var resourcesButton = $('<div/>', {id: 'toggle-reset-resources', text: i18n('ui.craft.resources'),
-                css: {cursor:'pointer',display:'inline-block',float:'right',paddingRight:'5px',textShadow:'3px 3px 4px gray'},});
-            var religionButton = $('<div/>', {id: 'toggle-reset-religion', text: i18n('ui.faith'),
-                css: {cursor:'pointer',display:'inline-block',float:'right',paddingRight:'5px',textShadow:'3px 3px 4px gray'},});
-            var timeButton = $('<div/>', {id: 'toggle-reset-time', text: i18n('ui.time'),
-                css: {cursor:'pointer',display:'inline-block',float:'right',paddingRight:'5px',textShadow:'3px 3px 4px gray'},});
+            for (var item in options.auto.build.items) resetBuildList.append(getResetOption(item, 'build', options.auto.build.items[item]));
+            for (var item in options.auto.space.items) resetSpaceList.append(getResetOption(item, 'space', options.auto.space.items[item]));
+            for (var item in options.auto.unicorn.items) resetReligionList.append(getResetOption(item, 'unicorn', options.auto.unicorn.items[item]));
+            for (var item in options.auto.faith.items) resetReligionList.append(getResetOption(item, 'faith', options.auto.faith.items[item]));
+            for (var item in options.auto.time.items) resetTimeList.append(getResetOption(item, 'time', options.auto.time.items[item]));
 
-            buildButton.on('click', function(){resetBuildList.toggle(); resetSpaceList.toggle(false); resetResourcesList.toggle(false); resetReligionList.toggle(false); resetTimeList.toggle(false);})
-            spaceButton.on('click', function(){resetBuildList.toggle(false); resetSpaceList.toggle(); resetResourcesList.toggle(false); resetReligionList.toggle(false); resetTimeList.toggle(false);})
-            resourcesButton.on('click', function(){resetBuildList.toggle(false); resetSpaceList.toggle(false); resetResourcesList.toggle(); resetReligionList.toggle(false); resetTimeList.toggle(false);})
-            religionButton.on('click', function(){resetBuildList.toggle(false); resetSpaceList.toggle(false); resetResourcesList.toggle(false); resetReligionList.toggle(); resetTimeList.toggle(false);})
-            timeButton.on('click', function(){resetBuildList.toggle(false); resetSpaceList.toggle(false); resetResourcesList.toggle(false); resetReligionList.toggle(false); resetTimeList.toggle();})
+            var buildButton = $('<div/>', {
+                id: 'toggle-reset-build', text: i18n('ui.build'),
+                css: { cursor: 'pointer', display: 'inline-block', float: 'right', paddingRight: '5px', textShadow: '3px 3px 4px gray' },
+            });
+            var spaceButton = $('<div/>', {
+                id: 'toggle-reset-space', text: i18n('ui.space'),
+                css: { cursor: 'pointer', display: 'inline-block', float: 'right', paddingRight: '5px', textShadow: '3px 3px 4px gray' },
+            });
+            var resourcesButton = $('<div/>', {
+                id: 'toggle-reset-resources', text: i18n('ui.craft.resources'),
+                css: { cursor: 'pointer', display: 'inline-block', float: 'right', paddingRight: '5px', textShadow: '3px 3px 4px gray' },
+            });
+            var religionButton = $('<div/>', {
+                id: 'toggle-reset-religion', text: i18n('ui.faith'),
+                css: { cursor: 'pointer', display: 'inline-block', float: 'right', paddingRight: '5px', textShadow: '3px 3px 4px gray' },
+            });
+            var timeButton = $('<div/>', {
+                id: 'toggle-reset-time', text: i18n('ui.time'),
+                css: { cursor: 'pointer', display: 'inline-block', float: 'right', paddingRight: '5px', textShadow: '3px 3px 4px gray' },
+            });
+
+            buildButton.on('click', function () { resetBuildList.toggle(); resetSpaceList.toggle(false); resetResourcesList.toggle(false); resetReligionList.toggle(false); resetTimeList.toggle(false); })
+            spaceButton.on('click', function () { resetBuildList.toggle(false); resetSpaceList.toggle(); resetResourcesList.toggle(false); resetReligionList.toggle(false); resetTimeList.toggle(false); })
+            resourcesButton.on('click', function () { resetBuildList.toggle(false); resetSpaceList.toggle(false); resetResourcesList.toggle(); resetReligionList.toggle(false); resetTimeList.toggle(false); })
+            religionButton.on('click', function () { resetBuildList.toggle(false); resetSpaceList.toggle(false); resetResourcesList.toggle(false); resetReligionList.toggle(); resetTimeList.toggle(false); })
+            timeButton.on('click', function () { resetBuildList.toggle(false); resetSpaceList.toggle(false); resetResourcesList.toggle(false); resetReligionList.toggle(false); resetTimeList.toggle(); })
 
             element.append(buildButton, spaceButton, resourcesButton, religionButton, timeButton,
                 resetBuildList, resetSpaceList, resetResourcesList, resetReligionList, resetTimeList);
         } else {
             var triggerButton = $('<div/>', {
-                id: 'set-' + name +'-subTrigger',
+                id: 'set-' + name + '-subTrigger',
                 text: i18n('ui.trigger'),
                 title: option.subTrigger,
-                css: {cursor: 'pointer',
+                css: {
+                    cursor: 'pointer',
                     display: 'inline-block',
                     float: 'right',
                     paddingRight: '5px',
-                    textShadow: '3px 3px 4px gray'}
+                    textShadow: '3px 3px 4px gray'
+                }
             }).data('option', option);
-    
+
             triggerButton.on('click', function () {
                 var value;
                 value = window.prompt(i18n('ui.trigger.set', [option.label]), option.subTrigger);
-    
+
                 if (value !== null) {
                     option.subTrigger = parseFloat(value);
                     kittenStorage.items[triggerButton.attr('id')] = option.subTrigger;
@@ -4928,7 +5020,7 @@ var run = function() {
     var getOptionsOption = function (name, option) {
         var element = getOption(name, option);
 
-        // hack for style. 
+        // hack for style.
         // If there are more UI options, split it to "getUIOption"
         if (name == 'style') {
             var input = element.children('input');
@@ -4948,20 +5040,22 @@ var run = function() {
 
         if (option.subTrigger !== undefined) {
             var triggerButton = $('<div/>', {
-                id: 'set-' + name +'-subTrigger',
+                id: 'set-' + name + '-subTrigger',
                 text: i18n('ui.trigger'),
                 title: option.subTrigger,
-                css: {cursor: 'pointer',
+                css: {
+                    cursor: 'pointer',
                     display: 'inline-block',
                     float: 'right',
                     paddingRight: '5px',
-                    textShadow: '3px 3px 4px gray'}
+                    textShadow: '3px 3px 4px gray'
+                }
             }).data('option', option);
 
             triggerButton.on('click', function () {
                 var value;
-                if (name == 'crypto'){value = window.prompt(i18n('ui.trigger.crypto.set', [option.label]), option.subTrigger);}
-                else{value = window.prompt(i18n('ui.trigger.set', [option.label]), option.subTrigger);}
+                if (name == 'crypto') { value = window.prompt(i18n('ui.trigger.crypto.set', [option.label]), option.subTrigger); }
+                else { value = window.prompt(i18n('ui.trigger.set', [option.label]), option.subTrigger); }
 
                 if (value !== null) {
                     option.subTrigger = parseFloat(value);
@@ -4978,7 +5072,7 @@ var run = function() {
     };
 
     var getDistributeOption = function (name, option) {
-        if (name == "leader") {return getLeader(name, option);}
+        if (name == "leader") { return getLeader(name, option); }
         var iname = ucfirst(i18n('$village.job.' + name));
 
         var element = getOption(name, option, iname);
@@ -5014,17 +5108,19 @@ var run = function() {
         element.append(input, label);
 
         var maxButton = $('<div/>', {
-            id: 'set-' + name +'-max',
+            id: 'set-' + name + '-max',
             text: i18n('ui.max', [option.max]),
             title: option.max,
-            css: {cursor: 'pointer',
+            css: {
+                cursor: 'pointer',
                 display: 'inline-block',
                 float: 'right',
                 paddingRight: '5px',
-                textShadow: '3px 3px 4px gray'}
+                textShadow: '3px 3px 4px gray'
+            }
         }).data('option', option);
 
-        (function (iname){
+        (function (iname) {
             maxButton.on('click', function () {
                 var value;
                 value = window.prompt(i18n('ui.max.set', [iname]), option.max);
@@ -5051,21 +5147,22 @@ var run = function() {
 
         var traitList = $('<ul/>', {
             id: 'items-list-traits',
-            css: {display: 'none', paddingLeft: '20px'}
+            css: { display: 'none', paddingLeft: '20px' }
         });
 
         var traitShowButton = $('<div/>', {
             id: 'toggle-leaderTrait' + name,
             text: i18n('$village.trait.filter.all'),
             css: {
-                cursor:'pointer',
-                display:'inline-block',
-                float:'right',
-                paddingRight:'5px',
-                textShadow:'3px 3px 4px gray'}
+                cursor: 'pointer',
+                display: 'inline-block',
+                float: 'right',
+                paddingRight: '5px',
+                textShadow: '3px 3px 4px gray'
+            }
         });
 
-        for (var i in com.nuclearunicorn.game.village.Kitten().traits){
+        for (var i in com.nuclearunicorn.game.village.Kitten().traits) {
             traitList.append(getLeaderTrait(i, option));
         }
 
@@ -5076,29 +5173,30 @@ var run = function() {
 
         var jobList = $('<ul/>', {
             id: 'items-list-jobs',
-            css: {display: 'none', paddingLeft: '20px'}
+            css: { display: 'none', paddingLeft: '20px' }
         });
 
         var jobShowButton = $('<div/>', {
             id: 'toggle-leaderJob' + name,
             text: i18n('$village.panel.job'),
             css: {
-                cursor:'pointer',
-                display:'inline-block',
-                float:'right',
-                paddingRight:'5px',
-                textShadow:'3px 3px 4px gray'}
+                cursor: 'pointer',
+                display: 'inline-block',
+                float: 'right',
+                paddingRight: '5px',
+                textShadow: '3px 3px 4px gray'
+            }
         });
 
-        for (var i in game.village.jobs){
+        for (var i in game.village.jobs) {
             jobList.append(getLeaderJob(i, option));
         }
-        
+
         jobShowButton.on('click', function () {
             traitList.toggle(false);
             jobList.toggle();
         });
-        
+
         element.append(traitShowButton, jobShowButton, traitList, jobList);
 
         return element;
@@ -5112,15 +5210,17 @@ var run = function() {
         var label = ($('<label/>', {
             'for': 'toggle-leaderJob-' + job.name,
             text: job.title,
-            css: {cursor: 'pointer',
-                textShadow: '3px 3px 4px gray'}
+            css: {
+                cursor: 'pointer',
+                textShadow: '3px 3px 4px gray'
+            }
         }));
 
         var input = $('<input/>', {
-           id: 'toggle-leaderJob-' + job.name,
-           name: 'leaderJob',
-           value: job.name,
-           type: 'radio'
+            id: 'toggle-leaderJob-' + job.name,
+            name: 'leaderJob',
+            value: job.name,
+            type: 'radio'
         }).data('option', option);
 
         if (input.prop("value") == option.leaderJob) {
@@ -5151,15 +5251,17 @@ var run = function() {
         var label = ($('<label/>', {
             'for': 'toggle-leaderTrait-' + trait.name,
             text: trait.title,
-            css: {cursor: 'pointer',
-                textShadow: '3px 3px 4px gray'}
+            css: {
+                cursor: 'pointer',
+                textShadow: '3px 3px 4px gray'
+            }
         }));
 
         var input = $('<input/>', {
-           id: 'toggle-leaderTrait-' + trait.name,
-           name: 'leaderTrait',
-           value: trait.name,
-           type: 'radio'
+            id: 'toggle-leaderTrait-' + trait.name,
+            name: 'leaderTrait',
+            value: trait.name,
+            type: 'radio'
         }).data('option', option);
 
         if (input.prop("value") == option.leaderTrait) {
@@ -5170,11 +5272,11 @@ var run = function() {
             var lastTraitName = $("input[name='leaderTrait']:checked").val();
             delete kittenStorage.items['toggle-leaderTrait-' + lastTraitName];
         });
-        
+
         input.on('change', function () {
             imessage('distribute.leaderTrait', [trait.title]);
             option.leaderTrait = $(this).val();
-            kittenStorage.items['toggle-leaderTrait-' + option.leaderTrait]= true;
+            kittenStorage.items['toggle-leaderTrait-' + option.leaderTrait] = true;
             saveToKittenStorage();
         });
         element.append(input, label);
@@ -5227,7 +5329,7 @@ var run = function() {
         }
     }
 
-    var optionsElement = $('<div/>', {id: 'ks-options', css: {marginBottom: '10px'}});
+    var optionsElement = $('<div/>', { id: 'ks-options', css: { marginBottom: '10px' } });
     var optionsListElement = $('<ul/>');
     var optionsTitleElement = $('<div/>', {
         css: { bottomBorder: '1px solid gray', marginBottom: '5px' },
@@ -5256,11 +5358,11 @@ var run = function() {
     var resetActivitySummary = function () {
         activitySummary = {
             lastyear: game.calendar.year,
-            lastday:  game.calendar.day,
-            craft:    {},
-            trade:    {},
-            build:    {},
-            other:    {}
+            lastday: game.calendar.day,
+            craft: {},
+            trade: {},
+            build: {},
+            other: {}
         };
     };
 
@@ -5282,7 +5384,7 @@ var run = function() {
 
         for (var i in activitySummary.other) {
             if (activitySummary.other[i])
-                isummary('summary.' + i , [game.getDisplayValueExt(activitySummary.other[i])]);
+                isummary('summary.' + i, [game.getDisplayValueExt(activitySummary.other[i])]);
         }
 
         // Techs
@@ -5378,10 +5480,10 @@ var run = function() {
             height: 'auto'
         }
     });
-    var mbClose = $('<a/>', {text: i18n('ui.close'), href: '#', css: {position: 'absolute', top: '10px', right: '15px'}});
-    mbClose.on('click', function () {messageBox.toggle(); });
-    var mbTitle = $('<h1/>', {id: 'mb-title', text: 'test text'});
-    var mbContent = $('<h1/>', {id: 'mb-content', text: 'test text'});
+    var mbClose = $('<a/>', { text: i18n('ui.close'), href: '#', css: { position: 'absolute', top: '10px', right: '15px' } });
+    mbClose.on('click', function () { messageBox.toggle(); });
+    var mbTitle = $('<h1/>', { id: 'mb-title', text: 'test text' });
+    var mbContent = $('<h1/>', { id: 'mb-content', text: 'test text' });
     messageBox.append(mbClose, mbTitle, mbContent);
     $('#gamePageContainer').append(messageBox);
 
@@ -5390,28 +5492,6 @@ var run = function() {
         mbContent.html(content);
         messageBox.toggle();
     }
-
-    // Donation Button
-    // ===============
-
-    var donate = $('<li/>', {id: "ks-donate"}).append($('<a/>', {
-        href: 'bitcoin:' + address + '?amount=0.00048&label=Kittens Donation',
-        target: '_blank',
-        text: address
-    })).prepend($('<img/>', {
-        css: {
-            height: '15px',
-            width: '15px',
-            padding: '3px 4px 0 4px',
-            verticalAlign: 'bottom'
-        },
-        src: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c29kaXBvZGk9Imh0dHA6Ly9zb2RpcG9kaS5zb3VyY2Vmb3JnZS5uZXQvRFREL3NvZGlwb2RpLTAuZHRkIgogICB4bWxuczppbmtzY2FwZT0iaHR0cDovL3d3dy5pbmtzY2FwZS5vcmcvbmFtZXNwYWNlcy9pbmtzY2FwZSIKICAgdmVyc2lvbj0iMS4xIgogICB3aWR0aD0iNTEycHgiCiAgIGhlaWdodD0iNTEycHgiCiAgIHZpZXdCb3g9IjAgMCAxIDEiCiAgIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIgogICBpZD0ic3ZnMiIKICAgaW5rc2NhcGU6dmVyc2lvbj0iMC40OC4yIHI5ODE5IgogICBzb2RpcG9kaTpkb2NuYW1lPSJiaXRjb2luLWxvZ28tbm9zaGFkb3cuc3ZnIj4KICA8bWV0YWRhdGEKICAgICBpZD0ibWV0YWRhdGEyMiI+CiAgICA8cmRmOlJERj4KICAgICAgPGNjOldvcmsKICAgICAgICAgcmRmOmFib3V0PSIiPgogICAgICAgIDxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PgogICAgICAgIDxkYzp0eXBlCiAgICAgICAgICAgcmRmOnJlc291cmNlPSJodHRwOi8vcHVybC5vcmcvZGMvZGNtaXR5cGUvU3RpbGxJbWFnZSIgLz4KICAgICAgICA8ZGM6dGl0bGU+PC9kYzp0aXRsZT4KICAgICAgPC9jYzpXb3JrPgogICAgPC9yZGY6UkRGPgogIDwvbWV0YWRhdGE+CiAgPHNvZGlwb2RpOm5hbWVkdmlldwogICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIKICAgICBib3JkZXJjb2xvcj0iIzY2NjY2NiIKICAgICBib3JkZXJvcGFjaXR5PSIxIgogICAgIG9iamVjdHRvbGVyYW5jZT0iMTAiCiAgICAgZ3JpZHRvbGVyYW5jZT0iMTAiCiAgICAgZ3VpZGV0b2xlcmFuY2U9IjEwIgogICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxNDQ3IgogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9Ijg2MSIKICAgICBpZD0ibmFtZWR2aWV3MjAiCiAgICAgc2hvd2dyaWQ9ImZhbHNlIgogICAgIGlua3NjYXBlOnpvb209IjAuOTIxODc1IgogICAgIGlua3NjYXBlOmN4PSIyMTIuNTE0MzciCiAgICAgaW5rc2NhcGU6Y3k9IjIzMy4yNDYxNyIKICAgICBpbmtzY2FwZTp3aW5kb3cteD0iMCIKICAgICBpbmtzY2FwZTp3aW5kb3cteT0iMCIKICAgICBpbmtzY2FwZTp3aW5kb3ctbWF4aW1pemVkPSIwIgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9InN2ZzIiIC8+CiAgPCEtLSBBbmRyb2lkIGxhdW5jaGVyIGljb25zOiB2aWV3Qm94PSItMC4wNDUgLTAuMDQ1IDEuMDkgMS4wOSIgLS0+CiAgPGRlZnMKICAgICBpZD0iZGVmczQiPgogICAgPGZpbHRlcgogICAgICAgaWQ9Il9kcm9wLXNoYWRvdyIKICAgICAgIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+CiAgICAgIDxmZUdhdXNzaWFuQmx1cgogICAgICAgICBpbj0iU291cmNlQWxwaGEiCiAgICAgICAgIHJlc3VsdD0iYmx1ci1vdXQiCiAgICAgICAgIHN0ZERldmlhdGlvbj0iMSIKICAgICAgICAgaWQ9ImZlR2F1c3NpYW5CbHVyNyIgLz4KICAgICAgPGZlQmxlbmQKICAgICAgICAgaW49IlNvdXJjZUdyYXBoaWMiCiAgICAgICAgIGluMj0iYmx1ci1vdXQiCiAgICAgICAgIG1vZGU9Im5vcm1hbCIKICAgICAgICAgaWQ9ImZlQmxlbmQ5IiAvPgogICAgPC9maWx0ZXI+CiAgICA8bGluZWFyR3JhZGllbnQKICAgICAgIGlkPSJjb2luLWdyYWRpZW50IgogICAgICAgeDE9IjAlIgogICAgICAgeTE9IjAlIgogICAgICAgeDI9IjAlIgogICAgICAgeTI9IjEwMCUiPgogICAgICA8c3RvcAogICAgICAgICBvZmZzZXQ9IjAlIgogICAgICAgICBzdHlsZT0ic3RvcC1jb2xvcjojZjlhYTRiIgogICAgICAgICBpZD0ic3RvcDEyIiAvPgogICAgICA8c3RvcAogICAgICAgICBvZmZzZXQ9IjEwMCUiCiAgICAgICAgIHN0eWxlPSJzdG9wLWNvbG9yOiNmNzkzMWEiCiAgICAgICAgIGlkPSJzdG9wMTQiIC8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8ZwogICAgIHRyYW5zZm9ybT0ic2NhbGUoMC4wMTU2MjUpIgogICAgIGlkPSJnMTYiPgogICAgPHBhdGgKICAgICAgIGlkPSJjb2luIgogICAgICAgZD0ibSA2My4wMzU5LDM5Ljc0MSBjIC00LjI3NCwxNy4xNDMgLTIxLjYzNywyNy41NzYgLTM4Ljc4MiwyMy4zMDEgLTE3LjEzOCwtNC4yNzQgLTI3LjU3MSwtMjEuNjM4IC0yMy4yOTUsLTM4Ljc4IDQuMjcyLC0xNy4xNDUgMjEuNjM1LC0yNy41NzkgMzguNzc1LC0yMy4zMDUgMTcuMTQ0LDQuMjc0IDI3LjU3NiwyMS42NCAyMy4zMDIsMzguNzg0IHoiCiAgICAgICBzdHlsZT0iZmlsbDp1cmwoI2NvaW4tZ3JhZGllbnQpIiAvPgogICAgPHBhdGgKICAgICAgIGlkPSJzeW1ib2wiCiAgICAgICBkPSJtIDQ2LjEwMDksMjcuNDQxIGMgMC42MzcsLTQuMjU4IC0yLjYwNSwtNi41NDcgLTcuMDM4LC04LjA3NCBsIDEuNDM4LC01Ljc2OCAtMy41MTEsLTAuODc1IC0xLjQsNS42MTYgYyAtMC45MjMsLTAuMjMgLTEuODcxLC0wLjQ0NyAtMi44MTMsLTAuNjYyIGwgMS40MSwtNS42NTMgLTMuNTA5LC0wLjg3NSAtMS40MzksNS43NjYgYyAtMC43NjQsLTAuMTc0IC0xLjUxNCwtMC4zNDYgLTIuMjQyLC0wLjUyNyBsIDAuMDA0LC0wLjAxOCAtNC44NDIsLTEuMjA5IC0wLjkzNCwzLjc1IGMgMCwwIDIuNjA1LDAuNTk3IDIuNTUsMC42MzQgMS40MjIsMC4zNTUgMS42NzksMS4yOTYgMS42MzYsMi4wNDIgbCAtMS42MzgsNi41NzEgYyAwLjA5OCwwLjAyNSAwLjIyNSwwLjA2MSAwLjM2NSwwLjExNyAtMC4xMTcsLTAuMDI5IC0wLjI0MiwtMC4wNjEgLTAuMzcxLC0wLjA5MiBsIC0yLjI5Niw5LjIwNSBjIC0wLjE3NCwwLjQzMiAtMC42MTUsMS4wOCAtMS42MDksMC44MzQgMC4wMzUsMC4wNTEgLTIuNTUyLC0wLjYzNyAtMi41NTIsLTAuNjM3IGwgLTEuNzQzLDQuMDE5IDQuNTY5LDEuMTM5IGMgMC44NSwwLjIxMyAxLjY4MywwLjQzNiAyLjUwMywwLjY0NiBsIC0xLjQ1Myw1LjgzNCAzLjUwNywwLjg3NSAxLjQzOSwtNS43NzIgYyAwLjk1OCwwLjI2IDEuODg4LDAuNSAyLjc5OCwwLjcyNiBsIC0xLjQzNCw1Ljc0NSAzLjUxMSwwLjg3NSAxLjQ1MywtNS44MjMgYyA1Ljk4NywxLjEzMyAxMC40ODksMC42NzYgMTIuMzg0LC00LjczOSAxLjUyNywtNC4zNiAtMC4wNzYsLTYuODc1IC0zLjIyNiwtOC41MTUgMi4yOTQsLTAuNTI5IDQuMDIyLC0yLjAzOCA0LjQ4MywtNS4xNTUgeiBtIC04LjAyMiwxMS4yNDkgYyAtMS4wODUsNC4zNiAtOC40MjYsMi4wMDMgLTEwLjgwNiwxLjQxMiBsIDEuOTI4LC03LjcyOSBjIDIuMzgsMC41OTQgMTAuMDEyLDEuNzcgOC44NzgsNi4zMTcgeiBtIDEuMDg2LC0xMS4zMTIgYyAtMC45OSwzLjk2NiAtNy4xLDEuOTUxIC05LjA4MiwxLjQ1NyBsIDEuNzQ4LC03LjAxIGMgMS45ODIsMC40OTQgOC4zNjUsMS40MTYgNy4zMzQsNS41NTMgeiIKICAgICAgIHN0eWxlPSJmaWxsOiNmZmZmZmYiIC8+CiAgPC9nPgo8L3N2Zz4='
-    }));
-
-    // Add some padding above the donation item
-    donate.css('padding', '5px');
-
-    optionsListElement.append(donate);
 
     // add the options above the game log
     right.prepend(optionsElement.append(optionsListElement));
@@ -5434,13 +5514,13 @@ var run = function() {
 
     loadFromKittenStorage();
 
-    // hack for style. 
+    // hack for style.
     // If there are more UI options, split it to "updateUI"
     $('#toggle-style').trigger('change');
 
     if (console && console.log) console.log(kg_version + " loaded");
     game._publish("kitten_scientists/ready", kg_version);
-    
+
     if (kittenStorage.reset && kittenStorage.reset.reset) {
         // calc paragon and karma
         kittenStorage.reset.karmaTotal += game.resPool.get('karma').value - Number(kittenStorage.reset.karmaLastTime);
@@ -5465,15 +5545,23 @@ var run = function() {
             karmaLastTime: 0,
             karmaTotal: 0
         }
+        // auto start
+        toggleEngine.prop('checked', true);
+        toggleEngine.trigger('change');
     }
     saveToKittenStorage();
 
+    var mod = document.createElement('script');
+    //mod.src = 'https://cdn.jsdelivr.net/gh/Bioniclegenius/NummonCalc/NummonCalc.js';
+    mod.src = 'https://likexia.gitee.io/cat-zh/NummonCalc.js';
+    mod.id = 'modscript_TriggerNotify';
+    document.head.appendChild(mod);
 }
 
-var loadTest = function() {
+var loadTest = function () {
     if (typeof gamePage === 'undefined') {
         // Test if kittens game is already loaded or wait 2s and try again
-        setTimeout(function(){
+        setTimeout(function () {
             loadTest();
         }, 2000);
     } else {
