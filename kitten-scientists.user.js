@@ -3148,7 +3148,7 @@ var run = function () {
                 var tick = this.craftManager.getTickVal(res);
                 if (tick === 'ignore') { continue; }
                 if (tick <= 0) { return true; }
-                if ((output[prod] + res.value) > res.maxValue) {
+                if ((output[prod] + res.value) < res.maxValue) {
                     profit += (res.maxValue > 0) ? Math.min(output[prod], Math.max(res.maxValue - res.value, 0)) / tick : output[prod] / tick;
                 }
 
