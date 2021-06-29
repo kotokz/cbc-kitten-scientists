@@ -2174,7 +2174,6 @@ var run = function () {
                     tradeNet[out] += (res.maxValue > 0) ? Math.min(meanOutput[out] * tradesDone[name], Math.max(res.maxValue - res.value, 0)) : meanOutput[out] * tradesDone[name];
                 }
             }
-
             cacheManager.pushToCache({ 'materials': tradeNet, 'timeStamp': game.timer.ticksTotal });
 
             for (var name in tradesDone) {
@@ -3145,19 +3144,20 @@ var run = function () {
             var profit = 0;
             for (var prod in output) {
                 var res = this.craftManager.getResource(prod);
-                var tick = this.craftManager.getTickVal(res);
+                var tick = this.craftManager.getTickVal(res, true);
                 if (tick === 'ignore') { continue; }
                 if (tick <= 0) { return true; }
-                if ((output[prod] + res.value) < res.maxValue) {
-                    profit += (res.maxValue > 0) ? Math.min(output[prod], Math.max(res.maxValue - res.value, 0)) / tick : output[prod] / tick;
+                if (res.maxValue === 0 || res.maxValue * 0.95 > res.value) {
+                    //profit += (res.maxValue > 0) ? Math.min(output[prod], Math.max(res.maxValue - res.value, 0)) / tick : output[prod] / tick;
+                    profit += output[prod] / tick;
+
                 }
 
                 if (prod === "titanium") {
                     if (cost > profit && gamePage.religion.getRU("solarRevolution").on) {
                         var titanium = gamePage.resPool.get('titanium');
                         if ((titanium.value / titanium.maxValue) < 0.4) {
-                            console.log("Titanium res < 40% cap hence force trade");
-                            console.log("profit=", profit, " cost=", cost);
+                            console.log("40% :profit=", profit, " cost=", cost);
                             return true;
                         }
                     } else if (cost > profit) {
